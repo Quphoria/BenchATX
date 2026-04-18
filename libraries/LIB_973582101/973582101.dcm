@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 973582101
+D TEST SOCKET, PCB, 4MM, RED; For Use With:PCBs; Current Rating:16A; Mounting Hole Dia:-; Operating Voltage:-; Insulator Colour:Red; Product Range:-; Connector Colour:Red; Connector Type:Test Socket; Contact Material:Brass RoHS Compliant: Yes
+K
+F http://uk.rs-online.com/web/p/products/0738547
+$ENDCMP
+#
+#End Doc Library

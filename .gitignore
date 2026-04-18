@@ -1,0 +1,15 @@
+
+# Kicad backups directory
+*-backups/
+
+# Kicad autosave
+_autosave-*
+
+# Kicad files
+fp-info-cache
+fp-lib-table
+sym-lib-table
+replicate_layout.log
+
+# My files
+Pi Pico Schematic.zip

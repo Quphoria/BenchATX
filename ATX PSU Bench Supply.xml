@@ -1,0 +1,1902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\TNT_SAMUEL\Documents\KiCad\7.0\projects\ATX PSU Bench Supply\ATX PSU Bench Supply.kicad_sch</source>
+    <date>13/04/2026 00:13:55</date>
+    <tool>Eeschema (7.0.0)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ATX PSU Bench Supply.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Power Monitor/" tstamps="/89237070-a0b1-4f4f-81d0-ae3bf66ebace/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Power Monitor.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Power Monitor1/" tstamps="/97ee77ad-29a5-43a8-954d-57a9fdc7e05a/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Power Monitor.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Power Monitor2/" tstamps="/2b2a9850-68bf-4310-b560-9b44e48dc69b/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Power Monitor.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/Power Monitor3/" tstamps="/182328d0-8c9e-453a-9a6e-081d68d7ccb3/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Power Monitor.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/Power Monitor4/" tstamps="/e50a1f29-aa07-4371-93b1-dacdf93fbe02/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Power Monitor.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C11">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">KGM21AR71C105JU</field>
+        <field name="Mouser No">581-KGM21AR71C105JU</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="KGM21AR71C105JU"/>
+      <property name="Mouser No" value="581-KGM21AR71C105JU"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6501830-97be-4f9d-a6a6-a8e8e04537c6</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">KGM21AR71C105JU</field>
+        <field name="Mouser No">581-KGM21AR71C105JU</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="KGM21AR71C105JU"/>
+      <property name="Mouser No" value="581-KGM21AR71C105JU"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0578d696-b3ea-4ae0-9f97-414e6b541f82</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06b62868-38f5-4b3f-bdfb-ba182689be90</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>66fac513-8c9b-4b63-a3a1-ef666d5b4b4a</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole_Pad</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_Pad_Via</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole with connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>41bd2f14-9c87-4037-a0cd-e622344039c3</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole_Pad</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_Pad_Via</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole with connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>308c4095-3df6-4a09-ae4b-074e95591e25</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole_Pad</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_Pad_Via</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole with connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9e447862-5c8d-4c93-832e-920a825c5465</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole_Pad</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3_Pad_Via</footprint>
+      <libsource lib="Mechanical" part="MountingHole_Pad" description="Mounting Hole with connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole with connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ed9b379b-4717-4fbd-b527-ee6f2dafec35</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>4mm Banana Socket R</value>
+      <footprint>LIB_973582101:973582101</footprint>
+      <fields>
+        <field name="Mfr. No">973582101</field>
+        <field name="Mouser No">845-973582101</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
+      <property name="Mfr. No" value="973582101"/>
+      <property name="Mouser No" value="845-973582101"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>106d33ab-1df7-4725-a6aa-80b027a66813</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>4mm Banana Socket R</value>
+      <footprint>LIB_973582101:973582101</footprint>
+      <fields>
+        <field name="Mfr. No">973582101</field>
+        <field name="Mouser No">845-973582101</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
+      <property name="Mfr. No" value="973582101"/>
+      <property name="Mouser No" value="845-973582101"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>18194a95-38e8-4ce2-9a19-1f81b20aa829</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>4mm Banana Socket B</value>
+      <footprint>LIB_973582101:973582101</footprint>
+      <fields>
+        <field name="Mfr. No">973582100</field>
+        <field name="Mouser No">845-973582100</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
+      <property name="Mfr. No" value="973582100"/>
+      <property name="Mouser No" value="845-973582100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>10b3c356-7f94-44eb-b2b7-b4c814410e14</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>4mm Banana Socket R</value>
+      <footprint>LIB_973582101:973582101</footprint>
+      <fields>
+        <field name="Mfr. No">973582101</field>
+        <field name="Mouser No">845-973582101</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
+      <property name="Mfr. No" value="973582101"/>
+      <property name="Mouser No" value="845-973582101"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2cafd51c-a4f6-4160-ac23-fc7a0f5b5ce7</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>4mm Banana Socket R</value>
+      <footprint>LIB_973582101:973582101</footprint>
+      <fields>
+        <field name="Mfr. No">973582101</field>
+        <field name="Mouser No">845-973582101</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
+      <property name="Mfr. No" value="973582101"/>
+      <property name="Mouser No" value="845-973582101"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b6dd193c-782f-4310-b4bc-3c3c98d55654</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>4mm Banana Socket B</value>
+      <footprint>LIB_973582101:973582101</footprint>
+      <fields>
+        <field name="Mfr. No">973582100</field>
+        <field name="Mouser No">845-973582100</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
+      <property name="Mfr. No" value="973582100"/>
+      <property name="Mouser No" value="845-973582100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59a869c9-2e51-4193-82cf-4ed1111e85fd</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>4mm Banana Socket R</value>
+      <footprint>LIB_973582101:973582101</footprint>
+      <fields>
+        <field name="Mfr. No">973582101</field>
+        <field name="Mouser No">845-973582101</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
+      <property name="Mfr. No" value="973582101"/>
+      <property name="Mouser No" value="845-973582101"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ec1f72ec-56fb-497c-bee8-32028f7c21f4</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>4mm Banana Socket B</value>
+      <footprint>LIB_973582101:973582101</footprint>
+      <fields>
+        <field name="Mfr. No">973582100</field>
+        <field name="Mouser No">845-973582100</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
+      <property name="Mfr. No" value="973582100"/>
+      <property name="Mouser No" value="845-973582100"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>15f2cf32-0e64-41ca-a7d7-ccba810bd0b1</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>Molex 39-30-1241</value>
+      <footprint>Connector_Molex:Molex_Mini-Fit_Jr_5569-24A2_2x12_P4.20mm_Horizontal</footprint>
+      <datasheet>https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33</datasheet>
+      <fields>
+        <field name="Mfr. No">39-30-1241</field>
+        <field name="Mouser No">538-39-30-1241</field>
+      </fields>
+      <libsource lib="Connector" part="ATX-24" description="ATX Power supply 24pins"/>
+      <property name="Mfr. No" value="39-30-1241"/>
+      <property name="Mouser No" value="538-39-30-1241"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="ATX Power supply 24pins"/>
+      <property name="ki_keywords" value="ATX PSU"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7e014224-8547-44b9-a16d-343b531ca2fe</tstamps>
+    </comp>
+    <comp ref="J10">
+      <value>Molex 46991-1008</value>
+      <footprint>Connector_Molex:Molex_Mini-Fit_Jr_5569-08A2_2x04_P4.20mm_Horizontal</footprint>
+      <fields>
+        <field name="Mfr. No">46991-1008</field>
+        <field name="Mouser No">538-46991-1008</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Top_Bottom" description="Generic connector, double row, 02x04, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Mfr. No" value="46991-1008"/>
+      <property name="Mouser No" value="538-46991-1008"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2074170f-84d8-48b8-94ee-f7e5e2320b1a</tstamps>
+    </comp>
+    <comp ref="J11">
+      <value>OLED-128x64</value>
+      <footprint>KLEEB_display:OLED-128x64</footprint>
+      <fields>
+        <field name="ADDR">ADDR: 0x78/0x7A</field>
+      </fields>
+      <libsource lib="KLEEB_display" part="OLED-128x64" description=""/>
+      <property name="ADDR" value="ADDR: 0x78/0x7A"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>38fa72a1-6fa9-4c73-8dc7-cfa03699d1b1</tstamps>
+    </comp>
+    <comp ref="J17">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5230d138-c735-4f07-8f5d-cafc73498737</tstamps>
+    </comp>
+    <comp ref="J18">
+      <value>Conn_01x08</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8035c7ac-65bf-4b36-bf16-9d44f93c00aa</tstamps>
+    </comp>
+    <comp ref="J19">
+      <value>Conn_01x05</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2ef35727-2dbe-4e29-82da-7c2e2d5ef243</tstamps>
+    </comp>
+    <comp ref="J20">
+      <value>Conn_01x07</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7388e7c5-1f92-463c-b14b-fb222ba650ab</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>50C02CH-TL-E</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23_Handsoldering</footprint>
+      <fields>
+        <field name="Mfr. No">50C02CH-TL-E</field>
+        <field name="Mouser No">863-50C02CH-TL-E</field>
+      </fields>
+      <libsource lib="Device" part="Q_NPN_BEC" description="NPN transistor, base/emitter/collector"/>
+      <property name="Mfr. No" value="50C02CH-TL-E"/>
+      <property name="Mouser No" value="863-50C02CH-TL-E"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="NPN transistor, base/emitter/collector"/>
+      <property name="ki_keywords" value="transistor NPN"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>457bc941-9984-4c8c-8834-181f0e522758</tstamps>
+    </comp>
+    <comp ref="R16">
+      <value>1.65k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW08051K65FKEA</field>
+        <field name="Mouser No">71-CRCW0805-1.65K-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW08051K65FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-1.65K-E3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e6c88d3b-e7eb-49bf-b948-6a8e307dd3ac</tstamps>
+    </comp>
+    <comp ref="R17">
+      <value>1.65k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW08051K65FKEA</field>
+        <field name="Mouser No">71-CRCW0805-1.65K-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW08051K65FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-1.65K-E3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e43e47a0-a0ae-47f3-8857-df9ad528cee6</tstamps>
+    </comp>
+    <comp ref="R18">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW08051K00FKEA</field>
+        <field name="Mouser No">71-CRCW0805-1.0K-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW08051K00FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-1.0K-E3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ea154c91-2ede-433c-950f-9597e8c74e3e</tstamps>
+    </comp>
+    <comp ref="R19">
+      <value>1.65k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW08051K65FKEA</field>
+        <field name="Mouser No">71-CRCW0805-1.65K-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW08051K65FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-1.65K-E3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ad4f4297-d041-400a-93d1-00abea33b37b</tstamps>
+    </comp>
+    <comp ref="R20">
+      <value>3.3k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW08053K30FKEA</field>
+        <field name="Mouser No">71-CRCW0805-3.3K-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW08053K30FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-3.3K-E3"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>281632b9-7a12-487e-acd1-b4190050c708</tstamps>
+    </comp>
+    <comp ref="R21">
+      <value>220</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW0805220KFKEA</field>
+        <field name="Mouser No">71-CRCW0805220KFKEA</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW0805220KFKEA"/>
+      <property name="Mouser No" value="71-CRCW0805220KFKEA"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dfa3dacf-390b-4ff9-96e5-a7ee12d1ab46</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5b81c12c-9382-4be1-8c0c-866dc74ea2a7</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_Push</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, generic, two pins"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>60097ff3-d429-4e55-a1cf-6c18706ae496</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>rp2040-zero</value>
+      <footprint>KLEEB_mcu:rp2040-zero-tht</footprint>
+      <libsource lib="KLEEB_mcu" part="rp2040-zero" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5709faf-0063-4fd9-a1c9-152f5c16fab4</tstamps>
+    </comp>
+    <comp ref="U7">
+      <value>TLV75733PDBV</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <datasheet>https://www.ti.com/lit/ds/symlink/tlv757p.pdf</datasheet>
+      <fields>
+        <field name="Mfr. No">TLV75733PDBVR</field>
+        <field name="Mouser No">595-TLV75733PDBVR</field>
+      </fields>
+      <libsource lib="Regulator_Linear" part="TLV75733PDBV" description="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
+      <property name="Mfr. No" value="TLV75733PDBVR"/>
+      <property name="Mouser No" value="595-TLV75733PDBVR"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
+      <property name="ki_keywords" value="LDO Regulator Fixed Positive"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2125757c-5e8e-466c-bf5d-4a8965e8112d</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x40"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor/" tstamps="/89237070-a0b1-4f4f-81d0-ae3bf66ebace/"/>
+      <tstamps>48874833-bc0f-4921-b38a-bb3e3cb36332</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x40"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor/" tstamps="/89237070-a0b1-4f4f-81d0-ae3bf66ebace/"/>
+      <tstamps>5987e4a6-110c-4c2e-8aee-4281db0f2bb4</tstamps>
+    </comp>
+    <comp ref="J12">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Power Monitor"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x40"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Power Monitor/" tstamps="/89237070-a0b1-4f4f-81d0-ae3bf66ebace/"/>
+      <tstamps>efa1b0f1-1890-472e-b50a-50c83ce125b3</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x40"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor/" tstamps="/89237070-a0b1-4f4f-81d0-ae3bf66ebace/"/>
+      <tstamps>0a4006c6-3230-4136-b07e-7c418514b702</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>0.005</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">MSMA2512R0050FEN</field>
+        <field name="Mouser No">504-MSMA2512R0050FEN</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="MSMA2512R0050FEN"/>
+      <property name="Mouser No" value="504-MSMA2512R0050FEN"/>
+      <property name="Sheetname" value="Power Monitor"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x40"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor/" tstamps="/89237070-a0b1-4f4f-81d0-ae3bf66ebace/"/>
+      <tstamps>ac15e36e-f623-4eac-83dd-fbde8632e7ed</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x40"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor/" tstamps="/89237070-a0b1-4f4f-81d0-ae3bf66ebace/"/>
+      <tstamps>406a7814-e5ca-45a6-bdcb-170c3ace691f</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>INA219BIDR</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ina219.pdf</datasheet>
+      <fields>
+        <field name="Mfr. No">INA219BIDR</field>
+        <field name="Mouser No">595-INA219BIDR</field>
+      </fields>
+      <libsource lib="Sensor_Energy" part="INA219BxD" description="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="Mfr. No" value="INA219BIDR"/>
+      <property name="Mouser No" value="595-INA219BIDR"/>
+      <property name="Sheetname" value="Power Monitor"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x40"/>
+      <property name="ki_description" value="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="ki_keywords" value="ADC I2C 16-Bit Oversampling Current Shunt"/>
+      <sheetpath names="/Power Monitor/" tstamps="/89237070-a0b1-4f4f-81d0-ae3bf66ebace/"/>
+      <tstamps>5d2a246f-cea6-4acd-ae86-e43e0a119a70</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor1"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x41"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor1/" tstamps="/97ee77ad-29a5-43a8-954d-57a9fdc7e05a/"/>
+      <tstamps>48874833-bc0f-4921-b38a-bb3e3cb36332</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor1"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x41"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor1/" tstamps="/97ee77ad-29a5-43a8-954d-57a9fdc7e05a/"/>
+      <tstamps>5987e4a6-110c-4c2e-8aee-4281db0f2bb4</tstamps>
+    </comp>
+    <comp ref="J13">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Power Monitor1"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x41"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Power Monitor1/" tstamps="/97ee77ad-29a5-43a8-954d-57a9fdc7e05a/"/>
+      <tstamps>efa1b0f1-1890-472e-b50a-50c83ce125b3</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor1"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x41"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor1/" tstamps="/97ee77ad-29a5-43a8-954d-57a9fdc7e05a/"/>
+      <tstamps>0a4006c6-3230-4136-b07e-7c418514b702</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>0.005</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">MSMA2512R0050FEN</field>
+        <field name="Mouser No">504-MSMA2512R0050FEN</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="MSMA2512R0050FEN"/>
+      <property name="Mouser No" value="504-MSMA2512R0050FEN"/>
+      <property name="Sheetname" value="Power Monitor1"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x41"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor1/" tstamps="/97ee77ad-29a5-43a8-954d-57a9fdc7e05a/"/>
+      <tstamps>ac15e36e-f623-4eac-83dd-fbde8632e7ed</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor1"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x41"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor1/" tstamps="/97ee77ad-29a5-43a8-954d-57a9fdc7e05a/"/>
+      <tstamps>406a7814-e5ca-45a6-bdcb-170c3ace691f</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>INA219BIDR</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ina219.pdf</datasheet>
+      <fields>
+        <field name="Mfr. No">INA219BIDR</field>
+        <field name="Mouser No">595-INA219BIDR</field>
+      </fields>
+      <libsource lib="Sensor_Energy" part="INA219BxD" description="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="Mfr. No" value="INA219BIDR"/>
+      <property name="Mouser No" value="595-INA219BIDR"/>
+      <property name="Sheetname" value="Power Monitor1"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x41"/>
+      <property name="ki_description" value="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="ki_keywords" value="ADC I2C 16-Bit Oversampling Current Shunt"/>
+      <sheetpath names="/Power Monitor1/" tstamps="/97ee77ad-29a5-43a8-954d-57a9fdc7e05a/"/>
+      <tstamps>5d2a246f-cea6-4acd-ae86-e43e0a119a70</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor2"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x42"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor2/" tstamps="/2b2a9850-68bf-4310-b560-9b44e48dc69b/"/>
+      <tstamps>48874833-bc0f-4921-b38a-bb3e3cb36332</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor2"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x42"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor2/" tstamps="/2b2a9850-68bf-4310-b560-9b44e48dc69b/"/>
+      <tstamps>5987e4a6-110c-4c2e-8aee-4281db0f2bb4</tstamps>
+    </comp>
+    <comp ref="J14">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Power Monitor2"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x42"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Power Monitor2/" tstamps="/2b2a9850-68bf-4310-b560-9b44e48dc69b/"/>
+      <tstamps>efa1b0f1-1890-472e-b50a-50c83ce125b3</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor2"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x42"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor2/" tstamps="/2b2a9850-68bf-4310-b560-9b44e48dc69b/"/>
+      <tstamps>0a4006c6-3230-4136-b07e-7c418514b702</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>0.005</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">MSMA2512R0050FEN</field>
+        <field name="Mouser No">504-MSMA2512R0050FEN</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="MSMA2512R0050FEN"/>
+      <property name="Mouser No" value="504-MSMA2512R0050FEN"/>
+      <property name="Sheetname" value="Power Monitor2"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x42"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor2/" tstamps="/2b2a9850-68bf-4310-b560-9b44e48dc69b/"/>
+      <tstamps>ac15e36e-f623-4eac-83dd-fbde8632e7ed</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor2"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x42"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor2/" tstamps="/2b2a9850-68bf-4310-b560-9b44e48dc69b/"/>
+      <tstamps>406a7814-e5ca-45a6-bdcb-170c3ace691f</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>INA219BIDR</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ina219.pdf</datasheet>
+      <fields>
+        <field name="Mfr. No">INA219BIDR</field>
+        <field name="Mouser No">595-INA219BIDR</field>
+      </fields>
+      <libsource lib="Sensor_Energy" part="INA219BxD" description="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="Mfr. No" value="INA219BIDR"/>
+      <property name="Mouser No" value="595-INA219BIDR"/>
+      <property name="Sheetname" value="Power Monitor2"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x42"/>
+      <property name="ki_description" value="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="ki_keywords" value="ADC I2C 16-Bit Oversampling Current Shunt"/>
+      <sheetpath names="/Power Monitor2/" tstamps="/2b2a9850-68bf-4310-b560-9b44e48dc69b/"/>
+      <tstamps>5d2a246f-cea6-4acd-ae86-e43e0a119a70</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor3"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x43"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor3/" tstamps="/182328d0-8c9e-453a-9a6e-081d68d7ccb3/"/>
+      <tstamps>48874833-bc0f-4921-b38a-bb3e3cb36332</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor3"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x43"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor3/" tstamps="/182328d0-8c9e-453a-9a6e-081d68d7ccb3/"/>
+      <tstamps>5987e4a6-110c-4c2e-8aee-4281db0f2bb4</tstamps>
+    </comp>
+    <comp ref="J15">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Power Monitor3"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x43"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Power Monitor3/" tstamps="/182328d0-8c9e-453a-9a6e-081d68d7ccb3/"/>
+      <tstamps>efa1b0f1-1890-472e-b50a-50c83ce125b3</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor3"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x43"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor3/" tstamps="/182328d0-8c9e-453a-9a6e-081d68d7ccb3/"/>
+      <tstamps>0a4006c6-3230-4136-b07e-7c418514b702</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>0.005</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">MSMA2512R0050FEN</field>
+        <field name="Mouser No">504-MSMA2512R0050FEN</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="MSMA2512R0050FEN"/>
+      <property name="Mouser No" value="504-MSMA2512R0050FEN"/>
+      <property name="Sheetname" value="Power Monitor3"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x43"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor3/" tstamps="/182328d0-8c9e-453a-9a6e-081d68d7ccb3/"/>
+      <tstamps>ac15e36e-f623-4eac-83dd-fbde8632e7ed</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor3"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x43"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor3/" tstamps="/182328d0-8c9e-453a-9a6e-081d68d7ccb3/"/>
+      <tstamps>406a7814-e5ca-45a6-bdcb-170c3ace691f</tstamps>
+    </comp>
+    <comp ref="U5">
+      <value>INA219BIDR</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ina219.pdf</datasheet>
+      <fields>
+        <field name="Mfr. No">INA219BIDR</field>
+        <field name="Mouser No">595-INA219BIDR</field>
+      </fields>
+      <libsource lib="Sensor_Energy" part="INA219BxD" description="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="Mfr. No" value="INA219BIDR"/>
+      <property name="Mouser No" value="595-INA219BIDR"/>
+      <property name="Sheetname" value="Power Monitor3"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x43"/>
+      <property name="ki_description" value="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="ki_keywords" value="ADC I2C 16-Bit Oversampling Current Shunt"/>
+      <sheetpath names="/Power Monitor3/" tstamps="/182328d0-8c9e-453a-9a6e-081d68d7ccb3/"/>
+      <tstamps>5d2a246f-cea6-4acd-ae86-e43e0a119a70</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor4"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x44"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor4/" tstamps="/e50a1f29-aa07-4371-93b1-dacdf93fbe02/"/>
+      <tstamps>48874833-bc0f-4921-b38a-bb3e3cb36332</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">08055C104JAT2A</field>
+        <field name="Mouser No">581-08055C104J</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Mfr. No" value="08055C104JAT2A"/>
+      <property name="Mouser No" value="581-08055C104J"/>
+      <property name="Sheetname" value="Power Monitor4"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x44"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/Power Monitor4/" tstamps="/e50a1f29-aa07-4371-93b1-dacdf93fbe02/"/>
+      <tstamps>5987e4a6-110c-4c2e-8aee-4281db0f2bb4</tstamps>
+    </comp>
+    <comp ref="J16">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value="Power Monitor4"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x44"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/Power Monitor4/" tstamps="/e50a1f29-aa07-4371-93b1-dacdf93fbe02/"/>
+      <tstamps>efa1b0f1-1890-472e-b50a-50c83ce125b3</tstamps>
+    </comp>
+    <comp ref="R13">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor4"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x44"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor4/" tstamps="/e50a1f29-aa07-4371-93b1-dacdf93fbe02/"/>
+      <tstamps>0a4006c6-3230-4136-b07e-7c418514b702</tstamps>
+    </comp>
+    <comp ref="R14">
+      <value>0.005</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.40x3.35mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">MSMA2512R0050FEN</field>
+        <field name="Mouser No">504-MSMA2512R0050FEN</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="MSMA2512R0050FEN"/>
+      <property name="Mouser No" value="504-MSMA2512R0050FEN"/>
+      <property name="Sheetname" value="Power Monitor4"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x44"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor4/" tstamps="/e50a1f29-aa07-4371-93b1-dacdf93fbe02/"/>
+      <tstamps>ac15e36e-f623-4eac-83dd-fbde8632e7ed</tstamps>
+    </comp>
+    <comp ref="R15">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Mfr. No">CRCW080510R0FKEA</field>
+        <field name="Mouser No">71-CRCW0805-10-E3</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Mfr. No" value="CRCW080510R0FKEA"/>
+      <property name="Mouser No" value="71-CRCW0805-10-E3"/>
+      <property name="Sheetname" value="Power Monitor4"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x44"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/Power Monitor4/" tstamps="/e50a1f29-aa07-4371-93b1-dacdf93fbe02/"/>
+      <tstamps>406a7814-e5ca-45a6-bdcb-170c3ace691f</tstamps>
+    </comp>
+    <comp ref="U6">
+      <value>INA219BIDR</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/ina219.pdf</datasheet>
+      <fields>
+        <field name="Mfr. No">INA219BIDR</field>
+        <field name="Mouser No">595-INA219BIDR</field>
+      </fields>
+      <libsource lib="Sensor_Energy" part="INA219BxD" description="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="Mfr. No" value="INA219BIDR"/>
+      <property name="Mouser No" value="595-INA219BIDR"/>
+      <property name="Sheetname" value="Power Monitor4"/>
+      <property name="Sheetfile" value="Power Monitor.kicad_sch"/>
+      <property name="ADDR" value="ADDR: 0x44"/>
+      <property name="ki_description" value="Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8"/>
+      <property name="ki_keywords" value="ADC I2C 16-Bit Oversampling Current Shunt"/>
+      <sheetpath names="/Power Monitor4/" tstamps="/e50a1f29-aa07-4371-93b1-dacdf93fbe02/"/>
+      <tstamps>5d2a246f-cea6-4acd-ae86-e43e0a119a70</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="ATX-24">
+      <description>ATX Power supply 24pins</description>
+      <docs>https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33</docs>
+      <footprints>
+        <fp>*Mini?Fit*2x12*Vertical*</fp>
+        <fp>*Mini?Fit*2x12*Horizontal*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">ATX-24</field>
+        <field name="Datasheet">https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+3.3V" type="power_out"/>
+        <pin num="2" name="+3.3V" type="passive"/>
+        <pin num="3" name="GND" type="power_out"/>
+        <pin num="4" name="+5V" type="power_out"/>
+        <pin num="5" name="GND" type="passive"/>
+        <pin num="6" name="+5V" type="passive"/>
+        <pin num="7" name="GND" type="passive"/>
+        <pin num="8" name="PWR_OK" type="output"/>
+        <pin num="9" name="+5VSB" type="power_out"/>
+        <pin num="10" name="+12V" type="power_out"/>
+        <pin num="11" name="+12V" type="passive"/>
+        <pin num="12" name="+3.3V" type="passive"/>
+        <pin num="13" name="+3.3V" type="passive"/>
+        <pin num="14" name="-12V" type="power_out"/>
+        <pin num="15" name="GND" type="passive"/>
+        <pin num="16" name="PS_ON#" type="open_collector"/>
+        <pin num="17" name="GND" type="passive"/>
+        <pin num="18" name="GND" type="passive"/>
+        <pin num="19" name="GND" type="passive"/>
+        <pin num="20" name="NC" type="no_connect"/>
+        <pin num="21" name="+5V" type="passive"/>
+        <pin num="22" name="+5V" type="passive"/>
+        <pin num="23" name="+5V" type="passive"/>
+        <pin num="24" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x01_Socket">
+      <description>Generic connector, single row, 01x01, script generated</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x01_Socket</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x05">
+      <description>Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x07">
+      <description>Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x07</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x08">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x04_Top_Bottom">
+      <description>Generic connector, double row, 02x04, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x04_Top_Bottom</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Q_NPN_BEC">
+      <description>NPN transistor, base/emitter/collector</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">Q_NPN_BEC</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="KLEEB_display" part="OLED-128x64">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">OLED-128x64</field>
+        <field name="Footprint">display:OLED-128x64</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VCC" type="power_in"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="KLEEB_mcu" part="rp2040-zero">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">rp2040-zero</field>
+      </fields>
+      <pins>
+        <pin num="1" name="0" type="bidirectional"/>
+        <pin num="2" name="1" type="bidirectional"/>
+        <pin num="3" name="2" type="bidirectional"/>
+        <pin num="4" name="3" type="bidirectional"/>
+        <pin num="5" name="4" type="bidirectional"/>
+        <pin num="6" name="5" type="bidirectional"/>
+        <pin num="7" name="6" type="bidirectional"/>
+        <pin num="8" name="7" type="bidirectional"/>
+        <pin num="9" name="8" type="bidirectional"/>
+        <pin num="10" name="9" type="bidirectional"/>
+        <pin num="11" name="10" type="bidirectional"/>
+        <pin num="12" name="11" type="bidirectional"/>
+        <pin num="13" name="12" type="bidirectional"/>
+        <pin num="14" name="13" type="bidirectional"/>
+        <pin num="15" name="14" type="bidirectional"/>
+        <pin num="16" name="15" type="bidirectional"/>
+        <pin num="17" name="26" type="bidirectional"/>
+        <pin num="18" name="27" type="bidirectional"/>
+        <pin num="19" name="28" type="bidirectional"/>
+        <pin num="20" name="29" type="bidirectional"/>
+        <pin num="21" name="3V3" type="power_out"/>
+        <pin num="22" name="GND" type="power_out"/>
+        <pin num="23" name="5V" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole_Pad">
+      <description>Mounting Hole with connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*Pad*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole_Pad</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="TLV75733PDBV">
+      <description>1A Low IQ Small Size Low Dropout Voltage Regulator, Fixed Output 3.3V, SOT-23-5</description>
+      <docs>https://www.ti.com/lit/ds/symlink/tlv757p.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLV75733PDBV</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23-5</field>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/tlv757p.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor_Energy" part="INA219BxD">
+      <description>Zero-Drift, HighAccuracy, Bidirectional Current/Power Monitor (0-26V) With I2C Interface, SOIC-8</description>
+      <docs>http://www.ti.com/lit/ds/symlink/ina219.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">INA219BxD</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/ina219.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="input"/>
+        <pin num="2" name="A0" type="input"/>
+        <pin num="3" name="SDA" type="bidirectional"/>
+        <pin num="4" name="SCL" type="input"/>
+        <pin num="5" name="VS" type="power_in"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="IN-" type="input"/>
+        <pin num="8" name="IN+" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>F:\ProgramFiles\KiCad\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>F:\ProgramFiles\KiCad\7.0\share\kicad\symbols\/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>F:\ProgramFiles\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="KLEEB_display">
+      <uri>C:\Users\TNT_SAMUEL\Documents\KiCad\7.0\projects\ATX PSU Bench Supply/libraries/kleeb/display.kicad_sym</uri>
+    </library>
+    <library logical="KLEEB_mcu">
+      <uri>C:\Users\TNT_SAMUEL\Documents\KiCad\7.0\projects\ATX PSU Bench Supply/libraries/kleeb/mcu.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>F:\ProgramFiles\KiCad\7.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>F:\ProgramFiles\KiCad\7.0\share\kicad\symbols\/Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="Sensor_Energy">
+      <uri>F:\ProgramFiles\KiCad\7.0\share\kicad\symbols\/Sensor_Energy.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>F:\ProgramFiles\KiCad\7.0\share\kicad\symbols\/Switch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="J11" pin="2" pinfunction="VCC" pintype="power_in"/>
+      <node ref="J18" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R16" pin="2" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="U1" pin="21" pinfunction="3V3" pintype="power_out"/>
+      <node ref="U2" pin="5" pinfunction="VS" pintype="power_in"/>
+      <node ref="U3" pin="2" pinfunction="A0" pintype="input"/>
+      <node ref="U3" pin="5" pinfunction="VS" pintype="power_in"/>
+      <node ref="U4" pin="5" pinfunction="VS" pintype="power_in"/>
+      <node ref="U5" pin="5" pinfunction="VS" pintype="power_in"/>
+      <node ref="U6" pin="1" pinfunction="A1" pintype="input"/>
+      <node ref="U6" pin="5" pinfunction="VS" pintype="power_in"/>
+      <node ref="U7" pin="5" pinfunction="OUT" pintype="power_out"/>
+    </net>
+    <net code="2" name="/-12V">
+      <node ref="J9" pin="14" pinfunction="-12V" pintype="power_out"/>
+    </net>
+    <net code="3" name="/3V3_PSU">
+      <node ref="J9" pin="1" pinfunction="+3.3V" pintype="power_out"/>
+      <node ref="J9" pin="12" pinfunction="+3.3V" pintype="passive"/>
+      <node ref="J9" pin="13" pinfunction="+3.3V" pintype="passive"/>
+      <node ref="J9" pin="2" pinfunction="+3.3V" pintype="passive"/>
+      <node ref="R13" pin="1" pintype="passive"/>
+      <node ref="R14" pin="1" pintype="passive"/>
+    </net>
+    <net code="4" name="/5VSB">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="J9" pin="9" pinfunction="+5VSB" pintype="power_out"/>
+      <node ref="U7" pin="1" pinfunction="IN" pintype="power_in"/>
+      <node ref="U7" pin="3" pinfunction="EN" pintype="input"/>
+    </net>
+    <net code="5" name="/5V_PSU">
+      <node ref="J9" pin="21" pinfunction="+5V" pintype="passive"/>
+      <node ref="J9" pin="22" pinfunction="+5V" pintype="passive"/>
+      <node ref="J9" pin="23" pinfunction="+5V" pintype="passive"/>
+      <node ref="J9" pin="4" pinfunction="+5V" pintype="power_out"/>
+      <node ref="J9" pin="6" pinfunction="+5V" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+    </net>
+    <net code="6" name="/12V_PSU">
+      <node ref="J10" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J10" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J10" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J10" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J9" pin="10" pinfunction="+12V" pintype="power_out"/>
+      <node ref="J9" pin="11" pinfunction="+12V" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="/BTN_1">
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="6" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/BTN_2">
+      <node ref="SW2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="7" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/PS_ON">
+      <node ref="R18" pin="1" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="8" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/PWR_OK">
+      <node ref="J9" pin="8" pinfunction="PWR_OK" pintype="output"/>
+      <node ref="R19" pin="2" pintype="passive"/>
+    </net>
+    <net code="11" name="/Power Monitor/Vout">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="/Power Monitor1/Vout">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="13" name="/Power Monitor2/Vout">
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+    </net>
+    <net code="14" name="/Power Monitor3/Vout">
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R11" pin="2" pintype="passive"/>
+      <node ref="R12" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="/Power Monitor4/Vout">
+      <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R14" pin="2" pintype="passive"/>
+      <node ref="R15" pin="1" pintype="passive"/>
+    </net>
+    <net code="16" name="/~{PS_ON}">
+      <node ref="J17" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J9" pin="16" pinfunction="PS_ON#" pintype="open_collector"/>
+      <node ref="R21" pin="1" pintype="passive"/>
+    </net>
+    <net code="17" name="GND">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="H1" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="H2" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="H3" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="H4" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J10" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J10" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J10" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J11" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="J17" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J18" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J19" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J20" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J9" pin="15" pinfunction="GND" pintype="passive"/>
+      <node ref="J9" pin="17" pinfunction="GND" pintype="passive"/>
+      <node ref="J9" pin="18" pinfunction="GND" pintype="passive"/>
+      <node ref="J9" pin="19" pinfunction="GND" pintype="passive"/>
+      <node ref="J9" pin="24" pinfunction="GND" pintype="passive"/>
+      <node ref="J9" pin="3" pinfunction="GND" pintype="power_out"/>
+      <node ref="J9" pin="5" pinfunction="GND" pintype="passive"/>
+      <node ref="J9" pin="7" pinfunction="GND" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="E" pintype="passive"/>
+      <node ref="R20" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U1" pin="22" pinfunction="GND" pintype="power_out"/>
+      <node ref="U2" pin="1" pinfunction="A1" pintype="input"/>
+      <node ref="U2" pin="2" pinfunction="A0" pintype="input"/>
+      <node ref="U2" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="A1" pintype="input"/>
+      <node ref="U3" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U4" pin="1" pinfunction="A1" pintype="input"/>
+      <node ref="U4" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U5" pin="1" pinfunction="A1" pintype="input"/>
+      <node ref="U5" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U6" pin="2" pinfunction="A0" pintype="input"/>
+      <node ref="U6" pin="6" pinfunction="GND" pintype="power_in"/>
+      <node ref="U7" pin="2" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="18" name="Net-(J12-Pin_1)">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="J12" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="IN+" pintype="input"/>
+    </net>
+    <net code="19" name="Net-(J12-Pin_2)">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="J12" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="IN-" pintype="input"/>
+    </net>
+    <net code="20" name="Net-(J13-Pin_1)">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="J13" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U3" pin="8" pinfunction="IN+" pintype="input"/>
+    </net>
+    <net code="21" name="Net-(J13-Pin_2)">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="J13" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U3" pin="7" pinfunction="IN-" pintype="input"/>
+    </net>
+    <net code="22" name="Net-(J14-Pin_1)">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="J14" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U4" pin="8" pinfunction="IN+" pintype="input"/>
+    </net>
+    <net code="23" name="Net-(J14-Pin_2)">
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="J14" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U4" pin="7" pinfunction="IN-" pintype="input"/>
+    </net>
+    <net code="24" name="Net-(J15-Pin_1)">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="J15" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U5" pin="8" pinfunction="IN+" pintype="input"/>
+    </net>
+    <net code="25" name="Net-(J15-Pin_2)">
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="J15" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R12" pin="2" pintype="passive"/>
+      <node ref="U5" pin="7" pinfunction="IN-" pintype="input"/>
+    </net>
+    <net code="26" name="Net-(J16-Pin_1)">
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="J16" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="R13" pin="2" pintype="passive"/>
+      <node ref="U6" pin="8" pinfunction="IN+" pintype="input"/>
+    </net>
+    <net code="27" name="Net-(J16-Pin_2)">
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J16" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R15" pin="2" pintype="passive"/>
+      <node ref="U6" pin="7" pinfunction="IN-" pintype="input"/>
+    </net>
+    <net code="28" name="Net-(J18-Pin_3)">
+      <node ref="J18" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="29" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="Net-(J18-Pin_4)">
+      <node ref="J18" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="28" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="Net-(J18-Pin_5)">
+      <node ref="J18" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="27" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="Net-(J18-Pin_6)">
+      <node ref="J18" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="17" pinfunction="26" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="Net-(J18-Pin_7)">
+      <node ref="J18" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="15" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="Net-(J18-Pin_8)">
+      <node ref="J18" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="14" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="Net-(J19-Pin_2)">
+      <node ref="J19" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="10" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="Net-(J19-Pin_3)">
+      <node ref="J19" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="11" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="Net-(J20-Pin_2)">
+      <node ref="J20" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="5" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="Net-(J20-Pin_3)">
+      <node ref="J20" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="4" pintype="bidirectional"/>
+    </net>
+    <net code="38" name="Net-(J20-Pin_4)">
+      <node ref="J20" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="3" pintype="bidirectional"/>
+    </net>
+    <net code="39" name="Net-(J20-Pin_5)">
+      <node ref="J20" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="2" pintype="bidirectional"/>
+    </net>
+    <net code="40" name="Net-(J20-Pin_6)">
+      <node ref="J20" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="1" pintype="bidirectional"/>
+    </net>
+    <net code="41" name="Net-(J20-Pin_7)">
+      <node ref="J20" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="0" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="Net-(Q1-B)">
+      <node ref="Q1" pin="1" pinfunction="B" pintype="input"/>
+      <node ref="R18" pin="2" pintype="passive"/>
+    </net>
+    <net code="43" name="Net-(Q1-C)">
+      <node ref="Q1" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="R21" pin="2" pintype="passive"/>
+    </net>
+    <net code="44" name="Net-(U1-9)">
+      <node ref="R19" pin="1" pintype="passive"/>
+      <node ref="R20" pin="2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="9" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="SCL">
+      <node ref="J11" pin="3" pinfunction="SCL" pintype="input"/>
+      <node ref="J19" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="R16" pin="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="13" pintype="bidirectional"/>
+      <node ref="U2" pin="4" pinfunction="SCL" pintype="input"/>
+      <node ref="U3" pin="4" pinfunction="SCL" pintype="input"/>
+      <node ref="U4" pin="4" pinfunction="SCL" pintype="input"/>
+      <node ref="U5" pin="2" pinfunction="A0" pintype="input"/>
+      <node ref="U5" pin="4" pinfunction="SCL" pintype="input"/>
+      <node ref="U6" pin="4" pinfunction="SCL" pintype="input"/>
+    </net>
+    <net code="46" name="SDA">
+      <node ref="J11" pin="4" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="J19" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R17" pin="1" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="12" pintype="bidirectional"/>
+      <node ref="U2" pin="3" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U3" pin="3" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U4" pin="2" pinfunction="A0" pintype="input"/>
+      <node ref="U4" pin="3" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U5" pin="3" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U6" pin="3" pinfunction="SDA" pintype="bidirectional"/>
+    </net>
+    <net code="47" name="unconnected-(J9-NC-Pad20)">
+      <node ref="J9" pin="20" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U1-5V-Pad23)">
+      <node ref="U1" pin="23" pinfunction="5V" pintype="power_out"/>
+    </net>
+    <net code="49" name="unconnected-(U7-NC-Pad4)">
+      <node ref="U7" pin="4" pinfunction="NC" pintype="no_connect"/>
+    </net>
+  </nets>
+</export>
