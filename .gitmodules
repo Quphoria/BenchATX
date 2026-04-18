@@ -1,3 +1,6 @@
-[submodule ".\\libraries\\kleeb\\"]
-	path = .\\libraries\\kleeb\\
+[submodule "libraries/kleeb"]
+	path = libraries/kleeb
 	url = https://github.com/crides/kleeb
+[submodule "firmware/pico-ssd1306"]
+	path = firmware/pico-ssd1306
+	url = https://github.com/daschr/pico-ssd1306.git

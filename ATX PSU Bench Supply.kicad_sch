@@ -1114,7 +1114,6 @@
     )
   )
 
-
   (junction (at 60.96 83.82) (diameter 0) (color 0 0 0 0)
     (uuid 09bf881e-ec57-4f6c-84d9-753bcf5ab8c9)
   )
@@ -2664,7 +2663,7 @@
     (property "Datasheet" "" (at 139.7 134.62 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "ADDR" "0x78/0x7A" (at 158.75 137.16 90) (show_name)
+    (property "ADDR" "0x3C/0x3D" (at 158.75 137.16 90) (show_name)
       (effects (font (size 1.27 1.27)))
     )
     (pin "1" (uuid f3288dc7-2c8e-4f52-a0ba-5dd951896cf4))

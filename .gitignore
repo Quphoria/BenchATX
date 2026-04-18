@@ -12,4 +12,8 @@ sym-lib-table
 replicate_layout.log
 
 # My files
-Pi Pico Schematic.zip
+.vscode/
+
+# CMake build dir
+build
+
