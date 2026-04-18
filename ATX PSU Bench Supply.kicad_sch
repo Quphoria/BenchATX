@@ -1917,6 +1917,10 @@
     (effects (font (size 2.54 2.54) (thickness 0.508) bold) (justify left bottom))
     (uuid b419234a-6846-4a38-b5d0-87b31b218705)
   )
+  (text "OLED has I2C Pullups" (at 30.48 149.86 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid c41de0d6-da3b-4d51-99c0-798dbf8715bf)
+  )
   (text "For Fast I2C" (at 31.75 129.54 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid f0a5bba4-83c9-4fa7-aabf-4d9aa4d374a5)
@@ -3815,7 +3819,7 @@
   )
 
   (symbol (lib_id "Device:R") (at 41.91 140.97 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
+    (in_bom yes) (on_board yes) (dnp yes)
     (uuid e43e47a0-a0ae-47f3-8857-df9ad528cee6)
     (property "Reference" "R6" (at 41.91 143.51 90)
       (effects (font (size 1.27 1.27)))
@@ -3852,7 +3856,7 @@
   )
 
   (symbol (lib_id "Device:R") (at 41.91 138.43 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (in_bom yes) (on_board yes) (dnp yes) (fields_autoplaced)
     (uuid e6c88d3b-e7eb-49bf-b948-6a8e307dd3ac)
     (property "Reference" "R5" (at 41.91 133.35 90)
       (effects (font (size 1.27 1.27)))
