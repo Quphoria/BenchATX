@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\TNT_SAMUEL\Documents\KiCad\7.0\projects\ATX PSU Bench Supply\ATX PSU Bench Supply.kicad_sch</source>
-    <date>13/04/2026 00:13:55</date>
+    <date>19/04/2026 01:43:36</date>
     <tool>Eeschema (7.0.0)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -228,14 +228,13 @@
     </comp>
     <comp ref="J1">
       <value>4mm Banana Socket R</value>
-      <footprint>LIB_973582101:973582101</footprint>
+      <footprint>LIB_24.243.1:24.243.1</footprint>
       <fields>
-        <field name="Mfr. No">973582101</field>
-        <field name="Mouser No">845-973582101</field>
+        <field name="Mfr. No">Multicomp 24.243.1</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
-      <property name="Mfr. No" value="973582101"/>
-      <property name="Mouser No" value="845-973582101"/>
+      <property name="Mfr. No" value="Multicomp 24.243.1"/>
+      <property name="Mouser No" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
@@ -245,14 +244,13 @@
     </comp>
     <comp ref="J2">
       <value>4mm Banana Socket R</value>
-      <footprint>LIB_973582101:973582101</footprint>
+      <footprint>LIB_24.243.1:24.243.1</footprint>
       <fields>
-        <field name="Mfr. No">973582101</field>
-        <field name="Mouser No">845-973582101</field>
+        <field name="Mfr. No">Multicomp 24.243.1</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
-      <property name="Mfr. No" value="973582101"/>
-      <property name="Mouser No" value="845-973582101"/>
+      <property name="Mfr. No" value="Multicomp 24.243.1"/>
+      <property name="Mouser No" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
@@ -262,14 +260,13 @@
     </comp>
     <comp ref="J3">
       <value>4mm Banana Socket B</value>
-      <footprint>LIB_973582101:973582101</footprint>
+      <footprint>LIB_24.243.1:24.243.2</footprint>
       <fields>
-        <field name="Mfr. No">973582100</field>
-        <field name="Mouser No">845-973582100</field>
+        <field name="Mfr. No">Multicomp 24.243.2</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
-      <property name="Mfr. No" value="973582100"/>
-      <property name="Mouser No" value="845-973582100"/>
+      <property name="Mfr. No" value="Multicomp 24.243.2"/>
+      <property name="Mouser No" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
@@ -279,14 +276,13 @@
     </comp>
     <comp ref="J4">
       <value>4mm Banana Socket R</value>
-      <footprint>LIB_973582101:973582101</footprint>
+      <footprint>LIB_24.243.1:24.243.1</footprint>
       <fields>
-        <field name="Mfr. No">973582101</field>
-        <field name="Mouser No">845-973582101</field>
+        <field name="Mfr. No">Multicomp 24.243.1</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
-      <property name="Mfr. No" value="973582101"/>
-      <property name="Mouser No" value="845-973582101"/>
+      <property name="Mfr. No" value="Multicomp 24.243.1"/>
+      <property name="Mouser No" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
@@ -296,14 +292,13 @@
     </comp>
     <comp ref="J5">
       <value>4mm Banana Socket R</value>
-      <footprint>LIB_973582101:973582101</footprint>
+      <footprint>LIB_24.243.1:24.243.1</footprint>
       <fields>
-        <field name="Mfr. No">973582101</field>
-        <field name="Mouser No">845-973582101</field>
+        <field name="Mfr. No">Multicomp 24.243.1</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
-      <property name="Mfr. No" value="973582101"/>
-      <property name="Mouser No" value="845-973582101"/>
+      <property name="Mfr. No" value="Multicomp 24.243.1"/>
+      <property name="Mouser No" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
@@ -313,14 +308,13 @@
     </comp>
     <comp ref="J6">
       <value>4mm Banana Socket B</value>
-      <footprint>LIB_973582101:973582101</footprint>
+      <footprint>LIB_24.243.1:24.243.2</footprint>
       <fields>
-        <field name="Mfr. No">973582100</field>
-        <field name="Mouser No">845-973582100</field>
+        <field name="Mfr. No">Multicomp 24.243.2</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
-      <property name="Mfr. No" value="973582100"/>
-      <property name="Mouser No" value="845-973582100"/>
+      <property name="Mfr. No" value="Multicomp 24.243.2"/>
+      <property name="Mouser No" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
@@ -330,14 +324,13 @@
     </comp>
     <comp ref="J7">
       <value>4mm Banana Socket R</value>
-      <footprint>LIB_973582101:973582101</footprint>
+      <footprint>LIB_24.243.1:24.243.1</footprint>
       <fields>
-        <field name="Mfr. No">973582101</field>
-        <field name="Mouser No">845-973582101</field>
+        <field name="Mfr. No">Multicomp 24.243.1</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
-      <property name="Mfr. No" value="973582101"/>
-      <property name="Mouser No" value="845-973582101"/>
+      <property name="Mfr. No" value="Multicomp 24.243.1"/>
+      <property name="Mouser No" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
@@ -347,14 +340,13 @@
     </comp>
     <comp ref="J8">
       <value>4mm Banana Socket B</value>
-      <footprint>LIB_973582101:973582101</footprint>
+      <footprint>LIB_24.243.1:24.243.2</footprint>
       <fields>
-        <field name="Mfr. No">973582100</field>
-        <field name="Mouser No">845-973582100</field>
+        <field name="Mfr. No">Multicomp 24.243.2</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x01_Socket" description="Generic connector, single row, 01x01, script generated"/>
-      <property name="Mfr. No" value="973582100"/>
-      <property name="Mouser No" value="845-973582100"/>
+      <property name="Mfr. No" value="Multicomp 24.243.2"/>
+      <property name="Mouser No" value=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x01, script generated"/>
@@ -363,16 +355,16 @@
       <tstamps>15f2cf32-0e64-41ca-a7d7-ccba810bd0b1</tstamps>
     </comp>
     <comp ref="J9">
-      <value>Molex 39-30-1241</value>
+      <value>Molex 39-30-1240</value>
       <footprint>Connector_Molex:Molex_Mini-Fit_Jr_5569-24A2_2x12_P4.20mm_Horizontal</footprint>
       <datasheet>https://www.intel.com/content/dam/www/public/us/en/documents/guides/power-supply-design-guide-june.pdf#page=33</datasheet>
       <fields>
-        <field name="Mfr. No">39-30-1241</field>
-        <field name="Mouser No">538-39-30-1241</field>
+        <field name="Mfr. No">39-30-1240</field>
+        <field name="Mouser No">538-39-30-1240</field>
       </fields>
       <libsource lib="Connector" part="ATX-24" description="ATX Power supply 24pins"/>
-      <property name="Mfr. No" value="39-30-1241"/>
-      <property name="Mouser No" value="538-39-30-1241"/>
+      <property name="Mfr. No" value="39-30-1240"/>
+      <property name="Mouser No" value="538-39-30-1240"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="ATX Power supply 24pins"/>
@@ -381,15 +373,15 @@
       <tstamps>7e014224-8547-44b9-a16d-343b531ca2fe</tstamps>
     </comp>
     <comp ref="J10">
-      <value>Molex 46991-1008</value>
+      <value>Molex 172448-0008</value>
       <footprint>Connector_Molex:Molex_Mini-Fit_Jr_5569-08A2_2x04_P4.20mm_Horizontal</footprint>
       <fields>
-        <field name="Mfr. No">46991-1008</field>
-        <field name="Mouser No">538-46991-1008</field>
+        <field name="Mfr. No">172448-0008</field>
+        <field name="Mouser No">538-172448-0008</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_02x04_Top_Bottom" description="Generic connector, double row, 02x04, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Mfr. No" value="46991-1008"/>
-      <property name="Mouser No" value="538-46991-1008"/>
+      <property name="Mfr. No" value="172448-0008"/>
+      <property name="Mouser No" value="538-172448-0008"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Generic connector, double row, 02x04, top/bottom pin numbering scheme (row 1: 1...pins_per_row, row2: pins_per_row+1 ... num_pins), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
@@ -401,10 +393,10 @@
       <value>OLED-128x64</value>
       <footprint>KLEEB_display:OLED-128x64</footprint>
       <fields>
-        <field name="ADDR">ADDR: 0x78/0x7A</field>
+        <field name="ADDR">ADDR: 0x3C/0x3D</field>
       </fields>
       <libsource lib="KLEEB_display" part="OLED-128x64" description=""/>
-      <property name="ADDR" value="ADDR: 0x78/0x7A"/>
+      <property name="ADDR" value="ADDR: 0x3C/0x3D"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -454,6 +446,17 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>7388e7c5-1f92-463c-b14b-fb222ba650ab</tstamps>
     </comp>
+    <comp ref="J21">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7d5d5cfd-aded-48d6-bb05-12e361a34328</tstamps>
+    </comp>
     <comp ref="Q1">
       <value>50C02CH-TL-E</value>
       <footprint>Package_TO_SOT_SMD:SOT-23_Handsoldering</footprint>
@@ -483,6 +486,7 @@
       <property name="Mouser No" value="71-CRCW0805-1.65K-E3"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="dnp"/>
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -500,6 +504,7 @@
       <property name="Mouser No" value="71-CRCW0805-1.65K-E3"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
+      <property name="dnp"/>
       <property name="ki_description" value="Resistor"/>
       <property name="ki_keywords" value="R res resistor"/>
       <sheetpath names="/" tstamps="/"/>
@@ -560,12 +565,12 @@
       <value>220</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
       <fields>
-        <field name="Mfr. No">CRCW0805220KFKEA</field>
-        <field name="Mouser No">71-CRCW0805220KFKEA</field>
+        <field name="Mfr. No">CRCW0805220RFKEAC</field>
+        <field name="Mouser No">71-CRCW0805220RFKEAC</field>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Mfr. No" value="CRCW0805220KFKEA"/>
-      <property name="Mouser No" value="71-CRCW0805220KFKEA"/>
+      <property name="Mfr. No" value="CRCW0805220RFKEAC"/>
+      <property name="Mouser No" value="71-CRCW0805220RFKEAC"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Resistor"/>
@@ -576,7 +581,13 @@
     <comp ref="SW1">
       <value>SW_Push</value>
       <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <fields>
+        <field name="Mfr. No">SKHHBWA010</field>
+        <field name="Mouser No">688-SKHHBW</field>
+      </fields>
       <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Mfr. No" value="SKHHBWA010"/>
+      <property name="Mouser No" value="688-SKHHBW"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Push button switch, generic, two pins"/>
@@ -587,7 +598,13 @@
     <comp ref="SW2">
       <value>SW_Push</value>
       <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <fields>
+        <field name="Mfr. No">SKHHBWA010</field>
+        <field name="Mouser No">688-SKHHBW</field>
+      </fields>
       <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <property name="Mfr. No" value="SKHHBWA010"/>
+      <property name="Mouser No" value="688-SKHHBW"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ATX PSU Bench Supply.kicad_sch"/>
       <property name="ki_description" value="Push button switch, generic, two pins"/>
@@ -1707,6 +1724,8 @@
       <node ref="J18" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J19" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J20" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J21" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J21" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
@@ -1893,7 +1912,7 @@
       <node ref="J9" pin="20" pinfunction="NC" pintype="no_connect"/>
     </net>
     <net code="48" name="unconnected-(U1-5V-Pad23)">
-      <node ref="U1" pin="23" pinfunction="5V" pintype="power_out"/>
+      <node ref="U1" pin="23" pinfunction="5V" pintype="power_out+no_connect"/>
     </net>
     <net code="49" name="unconnected-(U7-NC-Pad4)">
       <node ref="U7" pin="4" pinfunction="NC" pintype="no_connect"/>
