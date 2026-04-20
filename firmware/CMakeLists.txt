@@ -16,17 +16,27 @@ pico_sdk_init()
 
 add_executable(${NAME}
         blink.c
-        )
+        pico-ssd1306/ssd1306.c
+)
+
+target_include_directories(${NAME}
+    PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}/pico-ssd1306
+)
 
 # pull in common dependencies
-target_link_libraries(${NAME} pico_stdlib)
+target_link_libraries(${NAME} pico_stdlib hardware_i2c)
+
+# enable USB UART
+pico_enable_stdio_usb(${NAME} 1)
+pico_enable_stdio_uart(${NAME} 0)
 
 # create map/bin/hex file etc.
-pico_add_extra_outputs(blink)
+pico_add_extra_outputs(${NAME})
 
 # Copy .uf2 to main dir
 add_custom_command(
         TARGET ${NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
                 ${CMAKE_CURRENT_BINARY_DIR}/${NAME}.uf2
-                ${CMAKE_CURRENT_BINARY_DIR}/../${OUTPUT_NAME}.uf2)
+                ${CMAKE_CURRENT_LIST_DIR}/${OUTPUT_NAME}.uf2)
