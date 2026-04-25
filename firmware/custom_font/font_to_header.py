@@ -57,7 +57,7 @@ static const uint8_t {var_name}[] = {'{'}
     for i in range(num_chars):
         s += "  "
         for j in range(char_width*bytes_per_col):
-            s += f"0x{data[i*char_width+j]:02x}, "
+            s += f"0x{data[i*char_width*bytes_per_col+j]:02x}, "
         c = chr(start_char+i)
         s += f"// {c} (0x{start_char+i:02x})\n"
     s += "};\n"
@@ -75,12 +75,16 @@ if __name__ == "__main__":
     parser.add_argument("-W", "--char_width", default=5, type=int)
     parser.add_argument("-H", "--char_height", default=8, type=int)
     parser.add_argument("-p", "--extra_padding", default=0, type=int)
+    parser.add_argument("-o", "--output_file")
 
 
     args = parser.parse_args()
 
     image_file = Path(args.image_file)
     output_file = image_file.with_name(image_file.name + ".h")
+    if args.output_file:
+        output_file = Path(args.output_file)
+        output_file.absolute().parent.mkdir(exist_ok=True)
 
     gen_header(
         image_file,

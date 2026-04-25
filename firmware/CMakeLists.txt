@@ -25,7 +25,11 @@ target_include_directories(${NAME}
 )
 
 # pull in common dependencies
-target_link_libraries(${NAME} pico_stdlib hardware_i2c)
+target_link_libraries(${NAME} PUBLIC pico_stdlib hardware_i2c)
+
+# Font generation
+include(custom_font/fonts.cmake)
+target_link_libraries(${NAME} PRIVATE fonts)
 
 # enable USB UART
 pico_enable_stdio_usb(${NAME} 1)
