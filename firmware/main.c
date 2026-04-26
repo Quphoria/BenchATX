@@ -126,7 +126,7 @@ int main() {
 
     update_on_state(false);
 
-    bool show_anim = false;
+    uint8_t current_screen = 0;
     bool is_on = false;
     absolute_time_t measure_delay = get_absolute_time();
 
@@ -161,8 +161,8 @@ int main() {
         } 
 
         if (check_btn(0)) {
-            show_anim = !show_anim;
-            set_current_screen(show_anim ? 10 : 0);
+            current_screen = (current_screen + 1) % NUM_SCREENS;
+            set_current_screen(current_screen);
         }
 
         if (check_btn(1)) {

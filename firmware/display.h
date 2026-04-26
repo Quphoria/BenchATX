@@ -3,6 +3,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#define NUM_SCREENS 7
+
 void init_display(void);
 void refresh_display(void);
 void set_current_screen(uint8_t index);

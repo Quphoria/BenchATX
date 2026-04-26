@@ -2,9 +2,11 @@
 
 set(Pix32_Font_PATH ${CMAKE_CURRENT_LIST_DIR}/Pix32_Font.png)
 set(On_Icon_PATH ${CMAKE_CURRENT_LIST_DIR}/On_Icon.png)
+set(Chan_Icons_PATH ${CMAKE_CURRENT_LIST_DIR}/Chan_Icons.png)
 
 set(GEN_DIR ${CMAKE_CURRENT_BINARY_DIR}/gen_fonts)
 set(Pix32_Font_H_PATH ${GEN_DIR}/Pix32_Font.h)
+set(Chan_Icons_H_PATH ${GEN_DIR}/Chan_Icons.h)
 set(On_Icon_H_PATH ${GEN_DIR}/On_Icon.h)
 
 add_library(fonts INTERFACE)
@@ -49,3 +51,15 @@ add_custom_command(
 )
 add_custom_target(On_Icon_H DEPENDS ${On_Icon_H_PATH})
 add_dependencies(fonts On_Icon_H)
+
+add_custom_command(
+    OUTPUT ${Chan_Icons_H_PATH}
+    DEPENDS ${Chan_Icons_PATH} font_venv/ready
+    COMMAND ./font_venv/${VENV_BIN_DIR}/python "${CMAKE_CURRENT_LIST_DIR}/font_to_header.py"
+            -W 32 -H 16 -s 65 -c 5
+            "${Chan_Icons_PATH}"
+            -o "${Chan_Icons_H_PATH}"
+            Chan_Icons
+)
+add_custom_target(Chan_Icons_H DEPENDS ${Chan_Icons_H_PATH})
+add_dependencies(fonts Chan_Icons_H)

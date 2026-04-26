@@ -9,6 +9,7 @@
 
 #include "Pix32_Font.h"
 #include "On_Icon.h"
+#include "Chan_Icons.h"
 
 
 static ssd1306_t disp;
@@ -26,7 +27,7 @@ static union {
 
 void update_voltage(uint8_t index, int32_t voltage_mv) {
     if (index >= 5) return;
-    if (current_screen == 0) {
+    if (current_screen <= 5) {
         dirty |= st.screen0.voltage_mv[index] != voltage_mv;
     }
     st.screen0.voltage_mv[index] = voltage_mv;
@@ -34,14 +35,14 @@ void update_voltage(uint8_t index, int32_t voltage_mv) {
 
 void update_current(uint8_t index, int32_t current_100uA) {
     if (index >= 5) return;
-    if (current_screen == 0) {
+    if (current_screen <= 5) {
         dirty |= st.screen0.current_100uA[index] != current_100uA;
     }
     st.screen0.current_100uA[index] = current_100uA;
 }
 
 void update_on_state(bool state) {
-    if (current_screen == 0) {
+    if (current_screen <= 5) {
         dirty |= st.screen0.on_state != state;
     }
     st.screen0.on_state = state;
@@ -71,7 +72,13 @@ static void draw_string(ssd1306_t *p, uint32_t x, uint32_t y, uint32_t scale, co
     }
 }
 
-static inline uint8_t print_voltage(char *s, uint8_t n, int32_t voltage_mv) {
+static inline uint8_t print_voltage(char *s, uint8_t n, int32_t voltage_mv, bool large) {
+    if (large) {
+        // 12.123V
+        uint8_t mv = abs(voltage_mv) % 1000;
+        return snprintf(s, n, "%1d.%03dV", voltage_mv / 1000, mv);
+    }
+
     if (abs(voltage_mv) < 1000) { // < 1V
         // 123mV
         return snprintf(s, n, "%3dmV", voltage_mv);
@@ -88,10 +95,22 @@ static inline uint8_t print_voltage(char *s, uint8_t n, int32_t voltage_mv) {
     }
 }
 
-static inline uint8_t print_current(char *s, uint8_t n, int32_t current_100uA) {
+static inline uint8_t print_current(char *s, uint8_t n, int32_t current_100uA, bool large) {
+    if (large) {
+        if (abs(current_100uA) < 1000*10) { // < 1A
+            // 123.4mA
+            return snprintf(s, n, "%1d.%01dmA", current_100uA / 10, abs(current_100uA) % 10);
+        }
+        // 12.345A
+        // 1.234A
+        current_100uA /= 10; // Convert to mA
+        uint16_t ma = abs(current_100uA) % 1000;
+        current_100uA /= 1000; // Convert to amps
+        return snprintf(s, n, "%1d.%03dA", current_100uA, ma);
+    }
     if (abs(current_100uA) < 1000) { // < 100mA
         // 12.3mA
-        return snprintf(s, n, "%2d.%1dmA", current_100uA / 10, abs(current_100uA) % 10);
+        return snprintf(s, n, "%2d.%01dmA", current_100uA / 10, abs(current_100uA) % 10);
     }
     current_100uA /= 10; // Convert to mA
     uint16_t ma = abs(current_100uA) % 1000;
@@ -112,26 +131,26 @@ static void draw_screen0() {
     uint8_t w = 0;
 
     for (uint8_t i = 0; i < 5; i++) {
-        w = print_voltage(sp, n, st.screen0.voltage_mv[i]);
+        w = print_voltage(sp, n, st.screen0.voltage_mv[i], false);
         sp += w;
         n -= w;
         
-        if (n+1 < sizeof(s)) {
+        if (n > 1) {
             *(sp++) = ' ';
             n -= 1;
         }
 
-        w = print_current(sp, n, st.screen0.current_100uA[i]);
+        w = print_current(sp, n, st.screen0.current_100uA[i], false);
         sp += w;
         n -= w;
 
-        if (n+1 < sizeof(s) && i != 4) {
+        if (n > 1 && i != 4) {
             *(sp++) = '\n';
             n -= 1;
         }
     }
 
-    if (n+1 >= sizeof(s)) {
+    if (n <= 1) {
         printf("Error: String overflow rendering screen 0");
     }
 
@@ -144,6 +163,37 @@ static void draw_screen0() {
     if (st.screen0.on_state) {
         ssd1306_draw_char_with_font(&disp, 128-(On_Icon[1]*2)-2, 32-On_Icon[0], 2, On_Icon, 'A');
     }
+}
+
+static void draw_screen1_5() {
+    uint8_t i = current_screen - 1; // 0-4
+    if (i > 4) return;
+
+    ssd1306_draw_char_with_font(&disp, 0, 0, 1, Chan_Icons, 'A' + i);
+
+
+    if (st.screen0.on_state) {
+        ssd1306_draw_char_with_font(&disp, 128-On_Icon[1]-2, 2, 1, On_Icon, 'A');
+    }
+
+    char s[30];
+    uint8_t n = sizeof(s);
+
+    uint8_t w = print_voltage(s, n, st.screen0.voltage_mv[i], true);
+    n -= w;
+    
+    if (n > 1) {
+        s[w] = '\n';
+        n -= 1;
+    }
+
+    n -= print_current(&s[w+1], n, st.screen0.current_100uA[i], true);
+
+    if (n <= 1) {
+        printf("Error: String overflow rendering screen 0");
+    }
+
+    draw_string(&disp, 1, 16, 2, Pix32_Font, s);
 }
 
 static int anim_x = 0;
@@ -190,7 +240,14 @@ void refresh_display(void) {
         case 0:
             draw_screen0();
             break;
-        case 10:
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            draw_screen1_5();
+            break;
+        case 6:
             draw_anim();
             dirty = true; // Redraw every frame
             break;
