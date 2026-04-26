@@ -169,7 +169,15 @@ static void draw_screen1_5() {
     uint8_t i = current_screen - 1; // 0-4
     if (i > 4) return;
 
-    ssd1306_draw_char_with_font(&disp, 0, 0, 1, Chan_Icons, 'A' + i);
+    for (uint8_t j = 0; j < i; j++) {
+        // Draw dots before icon
+        ssd1306_draw_square(&disp, j*12+5, 7, 2, 2);
+    }
+    ssd1306_draw_char_with_font(&disp, i*12, 0, 1, Chan_Icons, 'A' + i); // Move icon along with index
+    for (uint8_t j = i+1; j < 5; j++) {
+        // Draw dots after icon
+        ssd1306_draw_square(&disp, j*12-12+32+5, 7, 2, 2);
+    }
 
 
     if (st.screen0.on_state) {

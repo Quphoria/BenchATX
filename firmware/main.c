@@ -60,19 +60,31 @@ static inline void init_btns() {
     }
 }
 
-static inline bool check_btn(uint8_t index) {
-    if (index >= 2) return false;
+static inline uint8_t check_btn(uint8_t index) {
+    if (index >= 2) return 0;
+
+    absolute_time_t t = get_absolute_time();
 
     // Check if delay expiry is in the future
-    if (absolute_time_diff_us(get_absolute_time(), btn_status.debounce_delay[index]) >= 0) return false;
+    if (absolute_time_diff_us(t, btn_status.debounce_delay[index]) >= 0) return 0;
+
+    // Reuse debounce delay timeout time, just subtract the debounce delay
+    bool long_press = !btn_status.prev_state[index] && absolute_time_diff_us(btn_status.debounce_delay[index], t) > 1000*(LONG_PRESS_MS-DEBOUNCE_DELAY_MS);
+    if (long_press && !btn_status.long_press[index]) {
+        btn_status.long_press[index] = true;
+        return LONG_PRESS;
+    }
 
     bool new_state = gpio_get(btn_status.pins[index]);
     if (btn_status.prev_state[index] != new_state) {
         btn_status.prev_state[index] = new_state;
-        btn_status.debounce_delay[index] = make_timeout_time_ms(50); // 50ms debounce
-        return !new_state; // 1 -> 0
+        btn_status.debounce_delay[index] = make_timeout_time_ms(DEBOUNCE_DELAY_MS); // 50ms debounce
+        btn_status.long_press[index] = false;
+        if (new_state == 1 && !long_press) { // 0 -> 1
+            return SHORT_PRESS;
+        }
     }
-    return false;
+    return 0;
 }
 
 int main() {
@@ -158,14 +170,22 @@ int main() {
                 update_voltage(i, v*1000);
                 update_current(i, c*10000);
             }
-        } 
-
-        if (check_btn(0)) {
-            current_screen = (current_screen + 1) % NUM_SCREENS;
-            set_current_screen(current_screen);
         }
 
-        if (check_btn(1)) {
+        uint8_t btn1 = check_btn(0);
+        uint8_t btn2 = check_btn(1);
+
+        if (btn1 == SHORT_PRESS && btn2 != SHORT_PRESS) {
+            if (current_screen == 0) {
+                current_screen = NUM_SCREENS-1;
+            } else {
+                current_screen -= 1;
+            }
+            set_current_screen(current_screen);
+        } else if (btn2 == SHORT_PRESS) {
+            current_screen = (current_screen + 1) % NUM_SCREENS;
+            set_current_screen(current_screen);
+        } else if (btn2 == LONG_PRESS) {
             is_on = !is_on;
             printf("Turning PSU %s\n", is_on ? "ON" : "OFF");
             update_on_state(is_on);
