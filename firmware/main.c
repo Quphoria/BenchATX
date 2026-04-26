@@ -174,23 +174,26 @@ int main() {
 
         uint8_t btn1 = check_btn(0);
         uint8_t btn2 = check_btn(1);
+        bool change_screen = false;
 
         if (btn1 == SHORT_PRESS && btn2 != SHORT_PRESS) {
-            if (current_screen == 0) {
-                current_screen = NUM_SCREENS-1;
-            } else {
-                current_screen -= 1;
-            }
-            set_current_screen(current_screen);
+            if (current_screen == 0) current_screen = NUM_SCREENS-1;
+            else current_screen -= 1;
+            change_screen = true;
         } else if (btn2 == SHORT_PRESS) {
             current_screen = (current_screen + 1) % NUM_SCREENS;
-            set_current_screen(current_screen);
+            change_screen = true;
+        } else if (btn1 == LONG_PRESS) {
+            current_screen = 0;
+            change_screen = true;
         } else if (btn2 == LONG_PRESS) {
             is_on = !is_on;
             printf("Turning PSU %s\n", is_on ? "ON" : "OFF");
             update_on_state(is_on);
             gpio_put(PS_ON_PIN, is_on);
         }
+
+        if (change_screen) set_current_screen(current_screen);
 
         update_pwr_ok(gpio_get(PWR_OK_PIN));
 
