@@ -28,7 +28,7 @@ target_include_directories(${NAME}
 )
 
 # pull in common dependencies
-target_link_libraries(${NAME} PUBLIC
+target_link_libraries(${NAME} PRIVATE
         pico_stdlib
         pico_unique_id
         hardware_watchdog
@@ -39,6 +39,10 @@ target_link_libraries(${NAME} PUBLIC
 # Font generation
 include(custom_font/fonts.cmake)
 target_link_libraries(${NAME} PRIVATE fonts)
+
+# Settings storage
+add_subdirectory(pico-kvstore)
+target_link_libraries(${NAME} PRIVATE kvstore kvstore_default)
 
 # enable USB UART
 pico_enable_stdio_usb(${NAME} 1)

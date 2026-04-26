@@ -7,6 +7,7 @@
 #include "pico/time.h"
 #include "hardware/i2c.h"
 #include "hardware/watchdog.h"
+#include "kvstore.h"
 
 #include "buttons.h"
 #include "display.h"
@@ -118,6 +119,7 @@ int main() {
 
     printf("Initializing peripherals...\n");
 
+    kvs_init();
     setup_i2c();
     init_btns();
     init_status_led(pio0);
@@ -141,6 +143,17 @@ int main() {
     uint8_t current_screen = 0;
     bool is_on = false;
     absolute_time_t measure_delay = get_absolute_time();
+
+    uint8_t startup_state = 0;
+    int rc = kvs_get("ST", &startup_state, 1, NULL);
+    if (rc != KVSTORE_SUCCESS) startup_state = 0;
+
+    if (startup_state) {
+        is_on = true;
+        printf("(Startup) Turning PSU ON\n");
+        update_on_state(is_on);
+        gpio_put(PS_ON_PIN, is_on);
+    }
 
     set_status_led(0x00, 0x60, 0x04, false);
     initialized = true;
@@ -191,6 +204,11 @@ int main() {
             printf("Turning PSU %s\n", is_on ? "ON" : "OFF");
             update_on_state(is_on);
             gpio_put(PS_ON_PIN, is_on);
+
+            if (current_screen == NUM_SCREENS-1) {
+                startup_state = is_on ? 1 : 0;
+                kvs_set("ST", &startup_state, 1);
+            }
         }
 
         if (change_screen) set_current_screen(current_screen);
