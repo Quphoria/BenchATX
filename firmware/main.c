@@ -7,12 +7,12 @@
 #include "pico/time.h"
 #include "hardware/i2c.h"
 #include "hardware/watchdog.h"
-#include "kvstore.h"
 
 #include "buttons.h"
 #include "display.h"
 #include "power_sensor.h"
 #include "status_led.h"
+#include "settings.h"
 
 #define WATCHDOG_TIMEOUT_MS 2000
 #define WATCHDOG_UPDATE_TIMER_MS 500
@@ -116,10 +116,10 @@ int main() {
 
     // Start watchdog
     watchdog_enable(WATCHDOG_TIMEOUT_MS, true); // Pause watchdog on debug
-
+    
+    load_settings();
+    
     printf("Initializing peripherals...\n");
-
-    kvs_init();
     setup_i2c();
     init_btns();
     init_status_led(pio0);
@@ -144,11 +144,7 @@ int main() {
     bool is_on = false;
     absolute_time_t measure_delay = get_absolute_time();
 
-    uint8_t startup_state = 0;
-    int rc = kvs_get("ST", &startup_state, 1, NULL);
-    if (rc != KVSTORE_SUCCESS) startup_state = 0;
-
-    if (startup_state) {
+    if (settings.startup_state) {
         is_on = true;
         printf("(Startup) Turning PSU ON\n");
         update_on_state(is_on);
@@ -157,6 +153,8 @@ int main() {
 
     set_status_led(0x00, 0x60, 0x04, false);
     initialized = true;
+
+    bool settings_open = false;
 
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
@@ -191,25 +189,42 @@ int main() {
         uint8_t btn2 = check_btn(1);
         bool change_screen = false;
 
-        if (btn1 == SHORT_PRESS && btn2 != SHORT_PRESS) {
-            if (current_screen == 0) current_screen = NUM_SCREENS-1;
-            else current_screen -= 1;
-            change_screen = true;
-        } else if (btn2 == SHORT_PRESS) {
-            current_screen = (current_screen + 1) % NUM_SCREENS;
-            change_screen = true;
-        } else if (btn1 == LONG_PRESS) {
-            current_screen = 0;
-            change_screen = true;
-        } else if (btn2 == LONG_PRESS) {
-            is_on = !is_on;
-            printf("Turning PSU %s\n", is_on ? "ON" : "OFF");
-            update_on_state(is_on);
-            gpio_put(PS_ON_PIN, is_on);
-
-            if (current_screen == NUM_SCREENS-1) {
-                startup_state = is_on ? 1 : 0;
-                kvs_set("ST", &startup_state, 1);
+        if (settings_open) {
+            // Settings menu takes control of buttons when open
+            if (update_settings_menu(btn1, btn2)) {
+                settings_open = false;
+                current_screen = 0;
+                change_screen = true;
+            }
+        } else {
+            if (btn1 == SHORT_PRESS && btn2 == SHORT_PRESS) {
+                // Do nothing
+            } else if (btn1 == SHORT_PRESS ) {
+                if (current_screen == 0) current_screen = NUM_SCREENS-1;
+                else current_screen -= 1;
+                change_screen = true;
+            } else if (btn2 == SHORT_PRESS) {
+                current_screen = (current_screen + 1) % NUM_SCREENS;
+                change_screen = true;
+            } else if (btn1 == LONG_PRESS) {
+                current_screen = 0;
+                change_screen = true;
+            } else if (btn2 == LONG_PRESS) {
+                if (current_screen == SETTINGS_SCREEN) {
+                    open_settings();
+                    settings_open = true;
+                } else {
+                    // Toggles power on other screens
+                    is_on = !is_on;
+                    printf("Turning PSU %s\n", is_on ? "ON" : "OFF");
+                    update_on_state(is_on);
+                    gpio_put(PS_ON_PIN, is_on);
+        
+                    if (current_screen == NUM_SCREENS-1) {
+                        settings.startup_state = is_on ? 1 : 0;
+                        save_settings();
+                    }
+                }
             }
         }
 

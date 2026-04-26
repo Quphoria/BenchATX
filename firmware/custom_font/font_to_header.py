@@ -11,7 +11,8 @@ def gen_header(
     start_char: int = 32,
     char_width: int = 5,
     char_height: int = 8,
-    extra_padding: int = 0
+    extra_padding: int = 0,
+    invert: bool = False,
 ):
     img = Image.open(image_file).convert("1") # black or white
 
@@ -31,6 +32,7 @@ def gen_header(
             x = 0
             for dy in range(char_height):
                 p = int(img.getpixel((sx+dx, sy+dy)) >= 128)
+                p ^= 1 if invert else 0
                 x |= p << dy # highest pixel stored in LSB
             for j in range(bytes_per_col):
                 data.append(x & 0xff)
@@ -73,6 +75,7 @@ if __name__ == "__main__":
     parser.add_argument("-H", "--char_height", default=8, type=int)
     parser.add_argument("-p", "--extra_padding", default=0, type=int)
     parser.add_argument("-o", "--output_file")
+    parser.add_argument("-I", "--invert", action="store_true")
 
 
     args = parser.parse_args()
@@ -91,5 +94,6 @@ if __name__ == "__main__":
         args.start_char,
         args.char_width,
         args.char_height,
-        args.extra_padding
+        args.extra_padding,
+        args.invert,
     )

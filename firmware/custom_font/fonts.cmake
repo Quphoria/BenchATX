@@ -6,6 +6,7 @@ set(Chan_Icons_PATH ${CMAKE_CURRENT_LIST_DIR}/Chan_Icons.png)
 
 set(GEN_DIR ${CMAKE_CURRENT_BINARY_DIR}/gen_fonts)
 set(Pix32_Font_H_PATH ${GEN_DIR}/Pix32_Font.h)
+set(Pix32_Inv_Font_H_PATH ${GEN_DIR}/Pix32_Inv_Font.h)
 set(Chan_Icons_H_PATH ${GEN_DIR}/Chan_Icons.h)
 set(On_Icon_H_PATH ${GEN_DIR}/On_Icon.h)
 
@@ -28,17 +29,30 @@ add_custom_command(
     COMMAND echo "ready" > ./font_venv/ready # signify the install was a success
 )
 
+
 add_custom_command(
-        OUTPUT ${Pix32_Font_H_PATH}
-        DEPENDS ${Pix32_Font_PATH} font_venv/ready
-        COMMAND ./font_venv/${VENV_BIN_DIR}/python "${CMAKE_CURRENT_LIST_DIR}/font_to_header.py"
-                -W 6 -H 12
-                "${Pix32_Font_PATH}"
-                -o "${Pix32_Font_H_PATH}"
-                Pix32_Font
+    OUTPUT ${Pix32_Font_H_PATH}
+    DEPENDS ${Pix32_Font_PATH} font_venv/ready
+    COMMAND ./font_venv/${VENV_BIN_DIR}/python "${CMAKE_CURRENT_LIST_DIR}/font_to_header.py"
+            -W 6 -H 12
+            "${Pix32_Font_PATH}"
+            -o "${Pix32_Font_H_PATH}"
+            Pix32_Font
 )
-add_custom_target(Pix32_Font_H DEPENDS ${Pix32_Font_H_PATH})
-add_dependencies(fonts Pix32_Font_H)
+add_custom_target(Pix32_Font DEPENDS ${Pix32_Font_H_PATH})
+add_dependencies(fonts Pix32_Font)
+
+add_custom_command(
+    OUTPUT ${Pix32_Inv_Font_H_PATH}
+    DEPENDS ${Pix32_Font_PATH} font_venv/ready
+    COMMAND ./font_venv/${VENV_BIN_DIR}/python "${CMAKE_CURRENT_LIST_DIR}/font_to_header.py"
+            -W 6 -H 12 -I
+            "${Pix32_Font_PATH}"
+            -o "${Pix32_Inv_Font_H_PATH}"
+            Pix32_Inv_Font
+)
+add_custom_target(Pix32_Inv_Font DEPENDS ${Pix32_Inv_Font_H_PATH})
+add_dependencies(fonts Pix32_Inv_Font)
 
 add_custom_command(
     OUTPUT ${On_Icon_H_PATH}
@@ -49,8 +63,8 @@ add_custom_command(
             -o "${On_Icon_H_PATH}"
             On_Icon
 )
-add_custom_target(On_Icon_H DEPENDS ${On_Icon_H_PATH})
-add_dependencies(fonts On_Icon_H)
+add_custom_target(On_Icon DEPENDS ${On_Icon_H_PATH})
+add_dependencies(fonts On_Icon)
 
 add_custom_command(
     OUTPUT ${Chan_Icons_H_PATH}
@@ -61,5 +75,5 @@ add_custom_command(
             -o "${Chan_Icons_H_PATH}"
             Chan_Icons
 )
-add_custom_target(Chan_Icons_H DEPENDS ${Chan_Icons_H_PATH})
-add_dependencies(fonts Chan_Icons_H)
+add_custom_target(Chan_Icons DEPENDS ${Chan_Icons_H_PATH})
+add_dependencies(fonts Chan_Icons)

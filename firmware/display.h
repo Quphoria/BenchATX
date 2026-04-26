@@ -3,7 +3,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define NUM_SCREENS 7
+#define NUM_SCREENS 8
+#define SETTINGS_SCREEN 6
 
 void init_display(void);
 void refresh_display(void);
@@ -15,3 +16,7 @@ void update_current(uint8_t index, int32_t current_100uA);
 void update_overflow(uint8_t index, bool overflow);
 void update_on_state(bool state);
 void update_pwr_ok(bool ok);
+
+// Settings screen FNS
+void open_settings(void);
+bool update_settings_menu(uint8_t btn1, uint8_t btn2); // Returns true to exit the screen

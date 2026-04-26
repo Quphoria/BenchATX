@@ -19,6 +19,7 @@ add_executable(${NAME}
         display.c
         power_sensor.c
         status_led.c
+        settings.c
         pico-ssd1306/ssd1306.c
 )
 
