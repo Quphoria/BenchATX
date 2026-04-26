@@ -16,6 +16,7 @@ pico_sdk_init()
 
 add_executable(${NAME}
         blink.c
+        display.c
         pico-ssd1306/ssd1306.c
 )
 
