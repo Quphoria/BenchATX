@@ -3,8 +3,8 @@ name: Firmware Build
 on: push
 
 jobs:
-  test_build:
-    name: Build example blink program
+  build:
+    name: Build firmware
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: true
 
       - name: Build Firmware
         id: build
