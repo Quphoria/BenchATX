@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.12)
 
 # add_subdirectory(pico-ssd1306/example)
 
-set(NAME blink)
-set(OUTPUT_NAME blink)
+set(NAME benchatx)
+set(OUTPUT_NAME BenchATX)
 
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_STANDARD 17)
 pico_sdk_init()
 
 add_executable(${NAME}
-        blink.c
+        main.c
         display.c
         pico-ssd1306/ssd1306.c
 )

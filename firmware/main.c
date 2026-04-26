@@ -1,9 +1,3 @@
-/**
- * Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
- *
- * SPDX-License-Identifier: BSD-3-Clause
- */
-
 #include "pico/stdlib.h"
 // To allow reset to bootloader
 #include "pico/bootrom.h"
@@ -27,7 +21,6 @@ static void enter_bootloader(void) {
 static const uint LED_PIN = 25;
 static const uint BTN1_PIN = 6;
 static const uint BTN2_PIN = 7;
-
 
 int main() {
     stdio_init_all();
