@@ -17,6 +17,8 @@ pico_sdk_init()
 add_executable(${NAME}
         main.c
         display.c
+        power_sensor.c
+        status_led.c
         pico-ssd1306/ssd1306.c
 )
 
@@ -26,7 +28,13 @@ target_include_directories(${NAME}
 )
 
 # pull in common dependencies
-target_link_libraries(${NAME} PUBLIC pico_stdlib hardware_i2c)
+target_link_libraries(${NAME} PUBLIC
+        pico_stdlib
+        pico_unique_id
+        hardware_watchdog
+        hardware_pio
+        hardware_i2c
+)
 
 # Font generation
 include(custom_font/fonts.cmake)

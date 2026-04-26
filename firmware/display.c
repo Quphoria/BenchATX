@@ -20,6 +20,7 @@ static union {
         int32_t voltage_mv[5];
         int32_t current_100uA[5];
         bool on_state;
+        bool pwr_ok;
     } screen0;
 } st = {0};
 
@@ -44,6 +45,13 @@ void update_on_state(bool state) {
         dirty |= st.screen0.on_state != state;
     }
     st.screen0.on_state = state;
+}
+
+void update_pwr_ok(bool ok) {
+    if (current_screen == 0) {
+        dirty |= st.screen0.pwr_ok != ok;
+    }
+    st.screen0.pwr_ok = ok;
 }
 
 static void draw_string(ssd1306_t *p, uint32_t x, uint32_t y, uint32_t scale, const uint8_t *font, const char *s) {
@@ -129,6 +137,10 @@ static void draw_screen0() {
 
     draw_string(&disp, 1, 2, 1, Pix32_Font, s);
 
+    if (st.screen0.pwr_ok) {
+        draw_string(&disp, 128-(Pix32_Font[1]*6)-2, 64-Pix32_Font[0]-2, 1, Pix32_Font, "PWR OK");
+    }
+
     if (st.screen0.on_state) {
         ssd1306_draw_char_with_font(&disp, 128-(On_Icon[1]*2)-2, 32-On_Icon[0], 2, On_Icon, 'A');
     }
@@ -163,6 +175,7 @@ void init_display(void) {
 }
 
 void set_current_screen(uint8_t index) {
+    printf("Current screen: %0d\n", index);
     current_screen = index;
     dirty = true;
 }

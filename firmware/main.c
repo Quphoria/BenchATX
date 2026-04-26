@@ -1,12 +1,40 @@
+#include <stdio.h>
+
 #include "pico/stdlib.h"
+#include "pico/unique_id.h"
 // To allow reset to bootloader
 #include "pico/bootrom.h"
+#include "pico/time.h"
 #include "hardware/i2c.h"
+#include "hardware/watchdog.h"
 
+#include "buttons.h"
 #include "display.h"
+#include "power_sensor.h"
+#include "status_led.h"
+
+#define WATCHDOG_TIMEOUT_MS 2000
+#define WATCHDOG_UPDATE_TIMER_MS 500
+
+#define BOARD_ID_STR_LEN (2 * PICO_UNIQUE_BOARD_ID_SIZE_BYTES + 1)
+
+static bool initialized = false;
+static bool alive = true;
+
+bool watchdog_update_timer_callback(struct repeating_timer *t) {
+    if (!initialized) return true;
+    if (!alive) return true;
+    alive = false;
+
+    watchdog_update();
+
+    return true;
+}
+
+static struct repeating_timer watchdog_update_timer;
 
 void setup_i2c(void) {
-    i2c_init(i2c0, 400000); // 400kHz I2C Fast Mode
+    i2c_init(i2c0, 400 * 1000); // 400kHz I2C Fast Mode
     gpio_set_function(12, GPIO_FUNC_I2C);
     gpio_set_function(13, GPIO_FUNC_I2C);
     gpio_pull_up(12);
@@ -19,13 +47,69 @@ static void enter_bootloader(void) {
 }
 
 static const uint LED_PIN = 25;
-static const uint BTN1_PIN = 6;
-static const uint BTN2_PIN = 7;
+static const uint PS_ON_PIN = 8;
+static const uint PWR_OK_PIN = 9;
+
+static inline void init_btns() {
+    for (uint8_t i = 0; i < NUM_BTNS; i++) {
+        gpio_init(btn_status.pins[i]);
+        gpio_set_dir(btn_status.pins[i], GPIO_IN);
+        gpio_set_pulls(btn_status.pins[i], true, false); // Enable pullup
+        btn_status.prev_state[i] = true;
+        btn_status.debounce_delay[i] = get_absolute_time();
+    }
+}
+
+static inline bool check_btn(uint8_t index) {
+    if (index >= 2) return false;
+
+    // Check if delay expiry is in the future
+    if (absolute_time_diff_us(get_absolute_time(), btn_status.debounce_delay[index]) >= 0) return false;
+
+    bool new_state = gpio_get(btn_status.pins[index]);
+    if (btn_status.prev_state[index] != new_state) {
+        btn_status.prev_state[index] = new_state;
+        btn_status.debounce_delay[index] = make_timeout_time_ms(50); // 50ms debounce
+        return !new_state; // 1 -> 0
+    }
+    return false;
+}
 
 int main() {
     stdio_init_all();
 
+    gpio_init(PS_ON_PIN);
+    gpio_set_dir(PS_ON_PIN, GPIO_OUT);
+    gpio_put(PS_ON_PIN, false);
+
+    gpio_init(PWR_OK_PIN);
+    gpio_set_dir(PWR_OK_PIN, GPIO_IN);
+
+    printf("\n\n\n\n\n");
+    printf("BenchATX\n");
+
+    if (watchdog_caused_reboot() &&
+        watchdog_enable_caused_reboot()) printf("Rebooted by Watchdog!\n");
+
+    pico_unique_board_id_t board_id;
+    char board_id_str[BOARD_ID_STR_LEN] = "";
+    pico_get_unique_board_id(&board_id);
+    pico_get_unique_board_id_string(board_id_str, BOARD_ID_STR_LEN);
+    printf("Board ID: %s\n", board_id_str);
+
+    add_repeating_timer_ms(WATCHDOG_UPDATE_TIMER_MS, watchdog_update_timer_callback, NULL, &watchdog_update_timer);
+
+    sleep_ms(500);
+
+    // Start watchdog
+    watchdog_enable(WATCHDOG_TIMEOUT_MS, true); // Pause watchdog on debug
+
+    printf("Initializing peripherals...\n");
+
     setup_i2c();
+    init_btns();
+    init_status_led(pio0);
+    init_power_sensors();
     init_display();
 
     update_voltage(0, 3.31*1000);
@@ -41,48 +125,54 @@ int main() {
     update_current(4, 0.0597*10000);
 
     update_on_state(false);
-   
-    gpio_init(BTN1_PIN);
-    gpio_init(BTN2_PIN);
-    gpio_set_dir(BTN1_PIN, GPIO_IN);
-    gpio_set_dir(BTN2_PIN, GPIO_IN);
-    gpio_set_pulls(BTN1_PIN, true, false); // Enable pullup
-    gpio_set_pulls(BTN2_PIN, true, false); // Enable pullup
-
-    int x = 0;
-    int y = 0;
 
     bool show_anim = false;
-
-    bool btn1_prev = true;
-    bool btn2_prev = true;
     bool is_on = false;
+    absolute_time_t measure_delay = get_absolute_time();
+
+    set_status_led(0x00, 0x60, 0x04, false);
+    initialized = true;
 
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
     int led = 0;
     while (true) {
+        alive = true;
+
         led = ~led;
         gpio_put(LED_PIN, led);
         // sleep_ms(50);
 
-        if (gpio_get(BTN1_PIN) != btn1_prev) {
-            if (btn1_prev) { // 1 -> 0
-                show_anim = !show_anim;
-                set_current_screen(show_anim ? 10 : 0);
+        if (absolute_time_diff_us(get_absolute_time(), measure_delay) < 0) {
+            measure_delay = make_timeout_time_ms(100); // Measure every 100ms
+
+            printf("\n");
+
+            for (uint8_t i = 0; i < NUM_POWER_SENSORS; i++) {
+                // Address order is backwards
+                float v = power_sens_get_voltage(NUM_POWER_SENSORS-1-i);
+                float c = power_sens_get_current(NUM_POWER_SENSORS-1-i);
+
+                printf("[CH %0d] Voltage: %6.3f V, Current %.1f mA\n", i, v, c*1000);
+                
+                update_voltage(i, v*1000);
+                update_current(i, c*10000);
             }
-            btn1_prev = !btn1_prev;
-            sleep_ms(50); // Lazy Debounce
+        } 
+
+        if (check_btn(0)) {
+            show_anim = !show_anim;
+            set_current_screen(show_anim ? 10 : 0);
         }
-        
-        if (gpio_get(BTN2_PIN) != btn2_prev) {
-            if (btn2_prev) { // 1 -> 0
-                is_on = !is_on;
-                update_on_state(is_on);
-            }
-            btn2_prev = !btn2_prev;
-            sleep_ms(50); // Lazy Debounce
+
+        if (check_btn(1)) {
+            is_on = !is_on;
+            printf("Turning PSU %s\n", is_on ? "ON" : "OFF");
+            update_on_state(is_on);
+            gpio_put(PS_ON_PIN, is_on);
         }
+
+        update_pwr_ok(gpio_get(PWR_OK_PIN));
 
         refresh_display();
     }
