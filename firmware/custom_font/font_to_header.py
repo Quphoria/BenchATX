@@ -3,9 +3,6 @@ import math
 from pathlib import Path
 from PIL import Image
 
-CHAR_WIDTH = 5
-CHAR_HEIGHT = 8
-
 def gen_header(
     image_file: Path,
     output_file: Path,
