@@ -177,11 +177,13 @@ int main() {
                 // Address order is backwards
                 float v = power_sens_get_voltage(NUM_POWER_SENSORS-1-i);
                 float c = power_sens_get_current(NUM_POWER_SENSORS-1-i);
+                bool ovf = power_sens_get_overflow(NUM_POWER_SENSORS-1-i);
 
-                printf("[CH %0d] Voltage: %6.3f V, Current %.1f mA\n", i, v, c*1000);
+                printf("[CH %0d] Voltage: %6.3f V, Current %.1f mA%s\n", i, v, c*1000, ovf ? " OVERFLOW!!!" : "");
                 
                 update_voltage(i, v*1000);
                 update_current(i, c*10000);
+                update_overflow(i, ovf);
             }
         }
 

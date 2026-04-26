@@ -20,6 +20,7 @@ static union {
     struct {
         int32_t voltage_mv[5];
         int32_t current_100uA[5];
+        bool overflow[5];
         bool on_state;
         bool pwr_ok;
     } screen0;
@@ -39,6 +40,14 @@ void update_current(uint8_t index, int32_t current_100uA) {
         dirty |= st.screen0.current_100uA[index] != current_100uA;
     }
     st.screen0.current_100uA[index] = current_100uA;
+}
+
+void update_overflow(uint8_t index, bool overflow) {
+    if (index >= 5) return;
+    if (current_screen <= 5) {
+        dirty |= st.screen0.overflow[index] != overflow;
+    }
+    st.screen0.overflow[index] = overflow;
 }
 
 void update_on_state(bool state) {
@@ -125,7 +134,7 @@ static inline uint8_t print_current(char *s, uint8_t n, int32_t current_100uA, b
 }
 
 static void draw_screen0() {
-    char s[15*5];
+    char s[17*5];
     char *sp = s;
     uint8_t n = sizeof(s);
     uint8_t w = 0;
@@ -143,11 +152,20 @@ static void draw_screen0() {
         w = print_current(sp, n, st.screen0.current_100uA[i], false);
         sp += w;
         n -= w;
+        
+        if (st.screen0.overflow[i]) {
+            if (n > 2) {
+                *(sp++) = ' ';
+                *(sp++) = '*';
+                n -= 2;
+            }
+        }
 
         if (n > 1 && i != 4) {
             *(sp++) = '\n';
             n -= 1;
         }
+
     }
 
     if (n <= 1) {
@@ -184,18 +202,26 @@ static void draw_screen1_5() {
         ssd1306_draw_char_with_font(&disp, 128-On_Icon[1]-2, 2, 1, On_Icon, 'A');
     }
 
-    char s[30];
+    char s[32];
     uint8_t n = sizeof(s);
 
     uint8_t w = print_voltage(s, n, st.screen0.voltage_mv[i], true);
     n -= w;
+
+    if (st.screen0.overflow[i]) {
+        if (n > 2) {
+            s[w++] = ' ';
+            s[w++] = '*';
+            n -= 2;
+        }
+    }
     
     if (n > 1) {
-        s[w] = '\n';
+        s[w++] = '\n';
         n -= 1;
     }
 
-    n -= print_current(&s[w+1], n, st.screen0.current_100uA[i], true);
+    n -= print_current(&s[w], n, st.screen0.current_100uA[i], true);
 
     if (n <= 1) {
         printf("Error: String overflow rendering screen 0");

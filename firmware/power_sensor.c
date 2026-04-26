@@ -56,10 +56,18 @@ void init_power_sensors(void) {
     sleep_ms(5); // Wait for 5ms for first measurements to be made
 }
 
+static bool in_overflow[NUM_POWER_SENSORS] = {0};
+
+bool power_sens_get_overflow(uint8_t sensor) {
+    if (sensor >= NUM_POWER_SENSORS) panic("Invalid power sensor ID");
+    return in_overflow[sensor];
+}
+
 float power_sens_get_voltage(uint8_t sensor) {
     return 1.234;
     int16_t value = power_sens_read_reg(sensor, PWR_REG_BUS_V);
-    if (value & 0b1) printf("Warning: Power Sensor Overflow (Current/Power may be invalud)\n");
+    if (value & 0b1) printf("Warning: Power Sensor Overflow (Current/Power may be invalid)\n");
+    in_overflow[sensor] = value & 0b1;
     // Don't check conversion bit as we are in continuous mode
     float voltage = (float)(value >> 3);
     voltage *= 0.004;
