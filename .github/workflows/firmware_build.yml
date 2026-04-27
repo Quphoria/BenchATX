@@ -63,7 +63,6 @@ jobs:
           cmake -S "$GITHUB_WORKSPACE/$SOURCE_DIR" -B "$GITHUB_WORKSPACE/$OUTPUT_DIR" -G "$MAKEFILES_GENERATOR" $CMAKE_ARGS
 
           echo "Building project..."
-          # This causes create font_venv to be called 2x in parallel
           make -j$(nproc)
 
           echo "output_dir=$OUTPUT_DIR" >> $GITHUB_OUTPUT
