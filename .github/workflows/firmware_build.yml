@@ -40,32 +40,18 @@ jobs:
           OUTPUT_DIR: build
           MAKEFILES_GENERATOR: "Unix Makefiles"
           CMAKE_ARGS: ""
-          OUTPUT_IGNORED_DIRS: "CMakeFiles elf2uf2 pico-sdk pioasm _deps"
-          OUTPUT_EXT: "*.uf2 *.elf *.elf.map *.dis"
         run: |
           set -e
 
-          # Make paths absolute
-          OUTPUT_DIR_REL="$OUTPUT_DIR"
-          SOURCE_DIR="$GITHUB_WORKSPACE/$SOURCE_DIR"
-          OUTPUT_DIR="$GITHUB_WORKSPACE/$OUTPUT_DIR"
-
-          rm -rf "$OUTPUT_DIR" && mkdir "$OUTPUT_DIR" && cd "$OUTPUT_DIR"
-          cmake -S "$SOURCE_DIR" -B "$OUTPUT_DIR" -G "$MAKEFILES_GENERATOR" $CMAKE_ARGS
+          mkdir "$OUTPUT_DIR" && cd "$OUTPUT_DIR"
+          cmake -S "$GITHUB_WORKSPACE/$SOURCE_DIR" -B "$GITHUB_WORKSPACE/$OUTPUT_DIR" -G "$MAKEFILES_GENERATOR" $CMAKE_ARGS
 
           echo "Building project..."
           # This causes create font_venv to be called 2x in parallel
-          # cd "$OUTPUT_DIR" && make -j$(nproc)
-          cd "$OUTPUT_DIR" && make
+          # make -j$(nproc)
+          make
 
-          echo "output_dir=$OUTPUT_DIR_REL" >> $GITHUB_OUTPUT
-
-      # - name: Build Firmware
-      #   id: build
-      #   uses: ./.github/actions/pico-build-action
-      #   with:
-      #     source_dir: firmware
-      #     output_ignored_dirs: font_venv
+          echo "output_dir=$OUTPUT_DIR" >> $GITHUB_OUTPUT
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
@@ -80,5 +66,5 @@ jobs:
       - name: Upload UF2
         uses: actions/upload-artifact@v4
         with:
-          name: firmware_binary
           path: ${{steps.build.outputs.output_dir}}/*.uf2
+          archive: false
