@@ -15,6 +15,8 @@
 #include "On_Icon.h"
 #include "Chan_Icons.h"
 
+#define POPUP_SHOW 2
+#define POPUP_SHOWN 1
 
 static ssd1306_t disp;
 
@@ -35,7 +37,20 @@ static struct {
         bool is_open;
         bool modified;
     } settings;
+    struct {
+        char msg[32];
+        uint8_t x;
+        uint8_t y;
+        uint8_t scale;
+        absolute_time_t hide_time;
+        uint8_t state;
+    } popup;
 } st = {0};
+
+static void draw_string(ssd1306_t *p, uint32_t x, uint32_t y, uint32_t scale, const uint8_t *font, const char *s);
+static void draw_string_with_inverts(ssd1306_t *p, uint32_t x, uint32_t y, uint32_t scale, const char *s);
+static inline uint8_t print_voltage(char *s, uint8_t n, int32_t voltage_mv, bool large);
+static inline uint8_t print_current(char *s, uint8_t n, int32_t current_100uA, bool large);
 
 static void draw_screen0();
 static void draw_screen1_5();
@@ -107,12 +122,37 @@ void set_current_screen(uint8_t index) {
     dirty = true;
 }
 
+void show_popup(uint8_t x, uint8_t y, uint8_t scale, uint16_t show_time_ms, const char *msg) {
+    st.popup.x = x;
+    st.popup.y = y;
+    st.popup.scale = scale;
+    strncpy(st.popup.msg, msg, sizeof(st.popup.msg));
+    st.popup.hide_time = make_timeout_time_ms(show_time_ms);
+    st.popup.state = POPUP_SHOW;
+    dirty = true;
+}
+
 void refresh_display(void) {
     if (!dirty) return;
     dirty = false;
 
+    if (st.popup.state) {
+        if (absolute_time_diff_us(get_absolute_time(), st.popup.hide_time) < 0) {
+            st.popup.state = 0;
+        } else {
+            if (st.popup.state == POPUP_SHOW) {
+                st.popup.state = POPUP_SHOWN;
+                ssd1306_clear(&disp);
+                draw_string_with_inverts(&disp, st.popup.x, st.popup.y, st.popup.scale, st.popup.msg);
+                ssd1306_show(&disp);
+            }
+            dirty = true;
+            return;
+        }
+    }
+
     ssd1306_clear(&disp);
-    
+
     switch (current_screen) {
         case 0:
             draw_screen0();
@@ -424,11 +464,13 @@ bool update_settings_menu(uint8_t btn1, uint8_t btn2) {
             }
         } else if (btn2 == LONG_PRESS) {
             st.settings.sel = false; // Save
+            show_popup(64-(5*Pix32_Font[1]), 32-Pix32_Font[0], 2, 500, "Saved");
             if (st.settings.index == 0) {
                 // Restore defaults
                 load_default_settings();
                 memcpy(&st.settings.tmp, &settings, sizeof settings);
                 save_settings();
+                return true; // Exit settings
             } if (st.settings.modified) {
                 memcpy(&settings, &st.settings.tmp, sizeof settings);
                 save_settings();

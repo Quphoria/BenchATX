@@ -207,23 +207,25 @@ int main() {
                 current_screen = (current_screen + 1) % NUM_SCREENS;
                 change_screen = true;
             } else if (btn1 == LONG_PRESS) {
-                current_screen = 0;
-                change_screen = true;
+                // Shortcut to settings if on screen 0
+                if (current_screen == 0) {
+                    set_current_screen(SETTINGS_SCREEN);
+                    open_settings();
+                    settings_open = true;
+                } else {
+                    current_screen = 0;
+                    change_screen = true;
+                }
             } else if (btn2 == LONG_PRESS) {
                 if (current_screen == SETTINGS_SCREEN) {
                     open_settings();
                     settings_open = true;
                 } else {
-                    // Toggles power on other screens
+                    // Toggle power on other screens
                     is_on = !is_on;
                     printf("Turning PSU %s\n", is_on ? "ON" : "OFF");
                     update_on_state(is_on);
                     gpio_put(PS_ON_PIN, is_on);
-        
-                    if (current_screen == NUM_SCREENS-1) {
-                        settings.startup_state = is_on ? 1 : 0;
-                        save_settings();
-                    }
                 }
             }
         }

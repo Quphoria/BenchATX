@@ -10,6 +10,8 @@ void init_display(void);
 void refresh_display(void);
 void set_current_screen(uint8_t index);
 
+void show_popup(uint8_t x, uint8_t y, uint8_t scale, uint16_t show_time_ms, const char *msg);
+
 // Screen 0 FNS
 void update_voltage(uint8_t index, int32_t voltage_mv);
 void update_current(uint8_t index, int32_t current_100uA);
