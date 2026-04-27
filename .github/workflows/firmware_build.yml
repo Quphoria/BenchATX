@@ -23,7 +23,15 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Cache pico-sdk
+        id: cache-pico-sdk
+        uses: actions/cache@v5
+        with:
+          path: pico-sdk
+          key: pico-sdk-2.2.0
+
       - name: Checkout pico-sdk/2.2.0
+        if: steps.cache-pico-sdk.outputs.cache-hit != 'true'
         uses: actions/checkout@v4
         with:
           repository: raspberrypi/pico-sdk
