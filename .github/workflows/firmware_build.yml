@@ -40,8 +40,8 @@ jobs:
           OUTPUT_DIR: build
           MAKEFILES_GENERATOR: "Unix Makefiles"
           CMAKE_ARGS: ""
-          OUTPUT_IGNORED_DIRS: "CMakeFiles elf2uf2 pico-sdk pioasm"
-          OUTPUT_EXT: "*.uf2 *.elf *.elf.map"
+          OUTPUT_IGNORED_DIRS: "CMakeFiles elf2uf2 pico-sdk pioasm _deps"
+          OUTPUT_EXT: "*.uf2 *.elf *.elf.map *.dis"
         run: |
           set -e
 
