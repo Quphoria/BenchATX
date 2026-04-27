@@ -40,6 +40,11 @@ jobs:
         run: |
           set -e
 
+          # Make paths absolute
+          OUTPUT_DIR_REL="$OUTPUT_DIR"
+          SOURCE_DIR="$GITHUB_WORKSPACE/$SOURCE_DIR"
+          OUTPUT_DIR="$GITHUB_WORKSPACE/$OUTPUT_DIR"
+
           mkdir "$OUTPUT_DIR" && cd "$OUTPUT_DIR"
           cmake -S "$SOURCE_DIR" -B "$OUTPUT_DIR" -G "$MAKEFILES_GENERATOR" $CMAKE_ARGS
 
@@ -80,7 +85,7 @@ jobs:
           echo "Moving build artifacts back to the output directory..."
           mv /tmp/make_build/* "$OUTPUT_DIR"
 
-          echo "output_dir=$OUTPUT_DIR" >> $GITHUB_OUTPUT
+          echo "output_dir=$OUTPUT_DIR_REL" >> $GITHUB_OUTPUT
 
       # - name: Build Firmware
       #   id: build
