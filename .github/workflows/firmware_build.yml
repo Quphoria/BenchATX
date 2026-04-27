@@ -39,11 +39,19 @@ jobs:
           path: pico-sdk
           submodules: recursive
 
+      - name: Cache picotool
+        id: cache-picotool
+        uses: actions/cache@v5
+        with:
+          path: picotool
+          key: picotool
+
       - name: Build Firmware
         id: build
         env:
           PICO_SDK_PATH: ${{github.workspace}}/pico-sdk
           PICO_COMPILER: arm-none-eabi-gcc
+          PICOTOOL_FETCH_FROM_GIT_PATH: ${{github.workspace}}/picotool
           SOURCE_DIR: firmware
           OUTPUT_DIR: build
           MAKEFILES_GENERATOR: "Unix Makefiles"
