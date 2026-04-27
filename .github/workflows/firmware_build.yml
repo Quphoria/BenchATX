@@ -48,8 +48,7 @@ jobs:
 
           echo "Building project..."
           # This causes create font_venv to be called 2x in parallel
-          # make -j$(nproc)
-          make
+          make -j$(nproc)
 
           echo "output_dir=$OUTPUT_DIR" >> $GITHUB_OUTPUT
 
