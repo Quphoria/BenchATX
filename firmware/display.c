@@ -55,7 +55,7 @@ static inline uint8_t print_current(char *s, uint8_t n, int32_t current_100uA, b
 static void draw_screen0();
 static void draw_screen1_5();
 static void draw_settings_menu();
-static void draw_anim();
+// static void draw_anim();
 
 void update_voltage(uint8_t index, int32_t voltage_mv) {
     if (index >= 5) return;
@@ -97,6 +97,9 @@ void update_pwr_ok(bool ok) {
 
 void init_display(void) {
     disp.external_vcc=false;
+#ifdef SH1106
+    disp.is_sh1106=true;
+#endif
     ssd1306_init(&disp, 128, 64, 0x3C, i2c0);
     /* Possible changes to init cmds
     
@@ -163,10 +166,10 @@ void refresh_display(void) {
         case 6:
             draw_settings_menu();
             break;
-        case 7:
-            draw_anim();
-            dirty = true; // Redraw every frame
-            break;
+        // case 7:
+        //     draw_anim();
+        //     dirty = true; // Redraw every frame
+        //     break;
     }
 
     ssd1306_show(&disp);
@@ -358,15 +361,15 @@ static void draw_screen1_5() {
     draw_string(&disp, 1, 18, 2, Pix32_Font, s);
 }
 
-static int anim_x = 0;
-static int anim_y = 0;
+// static int anim_x = 0;
+// static int anim_y = 0;
 
-static void draw_anim() {
-    ssd1306_draw_square(&disp, anim_x, 0, 2, 64);
-    anim_x = (anim_x + 1) % 128;
-    ssd1306_draw_square(&disp, 0, anim_y, 128, 2);
-    anim_y = (anim_y + 1) % 64;
-}
+// static void draw_anim() {
+//     ssd1306_draw_square(&disp, anim_x, 0, 2, 64);
+//     anim_x = (anim_x + 1) % 128;
+//     ssd1306_draw_square(&disp, 0, anim_y, 128, 2);
+//     anim_y = (anim_y + 1) % 64;
+// }
 
 static void draw_settings_menu() {
     char s[200];

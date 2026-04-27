@@ -20,12 +20,12 @@ add_executable(${NAME}
         power_sensor.c
         status_led.c
         settings.c
-        pico-ssd1306/ssd1306.c
+        pico-ssd1306-sh1106/ssd1306.c
 )
 
 target_include_directories(${NAME}
     PUBLIC
-        ${CMAKE_CURRENT_LIST_DIR}/pico-ssd1306
+        ${CMAKE_CURRENT_LIST_DIR}/pico-ssd1306-sh1106
 )
 
 # pull in common dependencies

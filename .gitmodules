@@ -1,9 +1,9 @@
 [submodule "libraries/kleeb"]
 	path = libraries/kleeb
 	url = https://github.com/crides/kleeb
-[submodule "firmware/pico-ssd1306"]
-	path = firmware/pico-ssd1306
-	url = https://github.com/daschr/pico-ssd1306.git
 [submodule "firmware/pico-kvstore"]
 	path = firmware/pico-kvstore
 	url = https://github.com/oyama/pico-kvstore.git
+[submodule "firmware/pico-ssd1306-sh1106"]
+	path = firmware/pico-ssd1306-sh1106
+	url = https://github.com/Quphoria/pico-ssd1306-sh1106.git

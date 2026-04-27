@@ -3,7 +3,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
-#define NUM_SCREENS 8
+// Use SH1106 instead of SSD1306
+// #define SH1106
+
+#define NUM_SCREENS 7
 #define SETTINGS_SCREEN 6
 
 void init_display(void);

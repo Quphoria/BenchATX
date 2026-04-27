@@ -40,7 +40,9 @@ void power_sens_write_reg(uint8_t sensor, uint8_t reg, uint16_t val);
 uint16_t power_sens_read_reg(uint8_t sensor, uint8_t reg);
 
 void init_power_sensors(void) {
+#ifdef DUMMY_SENSOR
     return;
+#endif
     for (uint8_t i = 0; i < NUM_POWER_SENSORS; i++) {
         // First reset chip
         power_sens_write_reg(i, PWR_REG_CONFIG, PWR_CFG_RESET);
@@ -64,7 +66,9 @@ bool power_sens_get_overflow(uint8_t sensor) {
 }
 
 float power_sens_get_voltage(uint8_t sensor) {
+#ifdef DUMMY_SENSOR
     return 1.234;
+#endif
     int16_t value = power_sens_read_reg(sensor, PWR_REG_BUS_V);
     if (value & 0b1) printf("Warning: Power Sensor Overflow (Current/Power may be invalid)\n");
     in_overflow[sensor] = value & 0b1;
@@ -75,13 +79,18 @@ float power_sens_get_voltage(uint8_t sensor) {
 }
 
 float power_sens_get_current(uint8_t sensor) {
+#ifdef DUMMY_SENSOR
     return 12.3456;
+#endif
     float current = (int16_t)power_sens_read_reg(sensor, PWR_REG_CURRENT);
     current *= CURRENT_LSB;
     return current;
 }
 
 float power_sens_get_power(uint8_t sensor) {
+#ifdef DUMMY_SENSOR
+    return 123.456;
+#endif
     float power = (int16_t)power_sens_read_reg(sensor, PWR_REG_POWER);
     power *= POWER_LSB;
     return power;
