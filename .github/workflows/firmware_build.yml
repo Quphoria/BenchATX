@@ -17,7 +17,7 @@ jobs:
 
       - name: Build Firmware
         id: build
-        uses: samyarsadat/Pico-Build-Action@v1
+        uses: ./.github/actions/pico-build-action.yml
         with:
           source_dir: firmware
           output_ignored_dirs: font_venv
