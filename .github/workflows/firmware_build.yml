@@ -23,7 +23,7 @@ jobs:
         with:
           repository: raspberrypi/pico-sdk
           ref: 2.2.0
-          path: pico-sdk
+          path: /tmp/pico-sdk
           submodules: recursive
 
       - name: Checkout
@@ -34,7 +34,7 @@ jobs:
       - name: Build Firmware
         id: build
         env:
-          PICO_SDK_PATH: ${{github.workspace}}/pico-sdk
+          PICO_SDK_PATH: /tmp/pico-sdk
           PICO_COMPILER: arm-none-eabi-gcc
           SOURCE_DIR: firmware
           OUTPUT_DIR: build
