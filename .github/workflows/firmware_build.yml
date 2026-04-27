@@ -30,6 +30,13 @@ jobs:
           path: pico-sdk
           key: pico-sdk-2.2.0
 
+      - name: Cache picotool
+        id: cache-picotool
+        uses: actions/cache@v5
+        with:
+          path: build/_deps/picotool*
+          key: picotool
+
       - name: Checkout pico-sdk/2.2.0
         if: steps.cache-pico-sdk.outputs.cache-hit != 'true'
         uses: actions/checkout@v4
