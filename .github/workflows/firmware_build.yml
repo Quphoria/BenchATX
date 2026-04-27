@@ -58,40 +58,6 @@ jobs:
           # cd "$OUTPUT_DIR" && make -j$(nproc)
           cd "$OUTPUT_DIR" && make
 
-          # Split output extensions and into array
-          IFS=" " read -r -a BINARY_EXTENSIONS <<< "$OUTPUT_EXT"
-
-          # Split ignored build directories into array and append to IGNORED_BUILD_DIRS
-          IFS=" " read -r -a IGNORED_BUILD_DIRS <<< "$OUTPUT_IGNORED_DIRS"
-
-          # Remove ignored build directories
-          echo "Removing unnecessary build directories..."
-          for dir in "${IGNORED_BUILD_DIRS[@]}"; do
-              if [ -d "$OUTPUT_DIR/$dir" ]; then
-                  echo "Removing $dir..."
-                  rm -rf "$OUTPUT_DIR/$dir"
-              fi
-          done
-
-          echo "Moving build artifacts to output directory..."
-          COPY_DEST_DIR="/tmp/make_build"
-          for ext in "${BINARY_EXTENSIONS[@]}"; do
-              find "$OUTPUT_DIR" -name "$ext" -print0 | while IFS= read -r -d '' file; do
-                  echo "Copying $file..."
-                  relative_path="${file#$OUTPUT_DIR/}"
-                  mkdir -p "$COPY_DEST_DIR/$(dirname "$relative_path")"
-                  cp "$file" "$COPY_DEST_DIR/$relative_path"
-              done
-          done
-
-          # Clear the build directory
-          echo "Clearing the build directory..."
-          rm -rf "$OUTPUT_DIR" && mkdir "$OUTPUT_DIR"
-
-          # Move the build artifacts back to the output directory
-          echo "Moving build artifacts back to the output directory..."
-          mv /tmp/make_build/* "$OUTPUT_DIR"
-
           echo "output_dir=$OUTPUT_DIR_REL" >> $GITHUB_OUTPUT
 
       # - name: Build Firmware
@@ -104,5 +70,15 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: workspace_artifacts
-          path: ${{steps.build.outputs.output_dir}}
+          name: build_artifacts
+          path: |
+            ${{steps.build.outputs.output_dir}}/*.uf2
+            ${{steps.build.outputs.output_dir}}/*.elf
+            ${{steps.build.outputs.output_dir}}/*.elf.map
+            ${{steps.build.outputs.output_dir}}/*.dis
+
+      - name: Upload UF2
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware_binary
+          path: ${{steps.build.outputs.output_dir}}/*.uf2
