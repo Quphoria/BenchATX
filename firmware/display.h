@@ -14,6 +14,7 @@ void refresh_display(void);
 void set_current_screen(uint8_t index);
 
 void show_popup(uint8_t x, uint8_t y, uint8_t scale, uint16_t show_time_ms, const char *msg);
+void show_popup_centered(uint8_t x, uint8_t y, uint8_t scale, uint16_t show_time_ms, uint8_t w, uint8_t h, const char *msg);
 
 // Screen 0 FNS
 void update_voltage(uint8_t index, int32_t voltage_mv);

@@ -22,6 +22,8 @@
 static bool initialized = false;
 static bool alive = true;
 
+static void process_command(const char *cmd);
+
 bool watchdog_update_timer_callback(struct repeating_timer *t) {
     if (!initialized) return true;
     if (!alive) return true;
@@ -89,6 +91,7 @@ static inline uint8_t check_btn(uint8_t index) {
 }
 
 int main() {
+    sleep_ms(500); // Wait for usb to disconnect before connecting
     stdio_init_all();
 
     gpio_init(PS_ON_PIN);
@@ -111,8 +114,6 @@ int main() {
     printf("Board ID: %s\n", board_id_str);
 
     add_repeating_timer_ms(WATCHDOG_UPDATE_TIMER_MS, watchdog_update_timer_callback, NULL, &watchdog_update_timer);
-
-    sleep_ms(500);
 
     // Start watchdog
     watchdog_enable(WATCHDOG_TIMEOUT_MS, true); // Pause watchdog on debug
@@ -155,6 +156,8 @@ int main() {
     initialized = true;
 
     bool settings_open = false;
+    char cmd_buf[64];
+    uint8_t cmd_len = 0;
 
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
@@ -164,7 +167,27 @@ int main() {
 
         led = ~led;
         gpio_put(LED_PIN, led);
-        // sleep_ms(50);
+
+        while (true) {
+            int ch = getchar_timeout_us(0);
+            if (ch == PICO_ERROR_TIMEOUT) break;
+
+            char c = ch;
+            if (cmd_len >= sizeof(cmd_buf)) {
+                printf("Error: Command buffer overflow\n");
+                cmd_len = 0;
+            } else if (c == '\n' || c == '\r') {
+                // Process command if not empty
+                if (cmd_len > 0) {
+                    cmd_buf[cmd_len] = 0;
+                    cmd_len = 0;
+                    process_command(cmd_buf);
+                }
+            } else {
+                // Append to buffer
+                cmd_buf[cmd_len++] = c;
+            }
+        }
 
         if (absolute_time_diff_us(get_absolute_time(), measure_delay) < 0) {
             measure_delay = make_timeout_time_ms(100); // Measure every 100ms
@@ -235,5 +258,17 @@ int main() {
         update_pwr_ok(gpio_get(PWR_OK_PIN));
 
         refresh_display();
+    }
+}
+
+static void process_command(const char *cmd) {
+    if (strcmp(cmd, "update") == 0) {
+        printf("Entering Bootloader...\n");
+        show_popup_centered(63, 31, 2, 1000, 6, 2, "Update\n Mode");
+        refresh_display();
+        sleep_ms(100);
+        enter_bootloader();
+    } else {
+        printf("Unknown command: %s\n", cmd);
     }
 }

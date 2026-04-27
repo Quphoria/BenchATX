@@ -135,6 +135,16 @@ void show_popup(uint8_t x, uint8_t y, uint8_t scale, uint16_t show_time_ms, cons
     dirty = true;
 }
 
+void show_popup_centered(uint8_t x, uint8_t y, uint8_t scale, uint16_t show_time_ms, uint8_t w, uint8_t h, const char *msg) {
+    int16_t x2 = x*2; // Center using half pixels, then floor to nearest pixel
+    int16_t y2 = y*2;
+
+    x2 -= scale * w * Pix32_Font[1];
+    y2 -= scale * h * Pix32_Font[0];
+
+    show_popup(x2/2, y2/2, scale, show_time_ms, msg);
+}
+
 void refresh_display(void) {
     if (!dirty) return;
     dirty = false;
@@ -467,7 +477,7 @@ bool update_settings_menu(uint8_t btn1, uint8_t btn2) {
             }
         } else if (btn2 == LONG_PRESS) {
             st.settings.sel = false; // Save
-            show_popup(64-(5*Pix32_Font[1]), 32-Pix32_Font[0], 2, 500, "Saved");
+            show_popup_centered(63, 31, 2, 500, 5, 1, "Saved");
             if (st.settings.index == 0) {
                 // Restore defaults
                 load_default_settings();
