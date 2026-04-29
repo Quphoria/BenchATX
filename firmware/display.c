@@ -36,6 +36,7 @@ static struct {
         bool sel;
         bool is_open;
         bool modified;
+        bool forced_contrast;
     } settings;
     struct {
         char msg[32];
@@ -101,14 +102,8 @@ void init_display(void) {
     disp.is_sh1106=true;
 #endif
     ssd1306_init(&disp, 128, 64, 0x3C, i2c0);
-    /* Possible changes to init cmds
-    
-    SET_CONTRAST,
-    0xCF, // From https://github.com/adafruit/Adafruit_SSD1306/blob/master/Adafruit_SSD1306.cpp#L598
-    ...
-    SET_VCOM_DESEL,
-    0x40, // From https://github.com/adafruit/Adafruit_SSD1306/blob/master/Adafruit_SSD1306.cpp#L618
-    */
+    ssd1306_contrast(&disp, settings.disp_contrast);
+    printf("Contrast: 0x%02x\n", settings.disp_contrast);
 
     dirty = true;
     ssd1306_clear(&disp);
@@ -152,12 +147,14 @@ void refresh_display(void) {
     if (st.popup.state) {
         if (absolute_time_diff_us(get_absolute_time(), st.popup.hide_time) < 0) {
             st.popup.state = 0;
+            ssd1306_contrast(&disp, settings.disp_contrast);
         } else {
             if (st.popup.state == POPUP_SHOW) {
                 st.popup.state = POPUP_SHOWN;
                 ssd1306_clear(&disp);
                 draw_string_with_inverts(&disp, st.popup.x, st.popup.y, st.popup.scale, st.popup.msg);
                 ssd1306_show(&disp);
+                ssd1306_contrast(&disp, 0xff); // Force contrast for popup
             }
             dirty = true;
             return;
@@ -173,7 +170,7 @@ void refresh_display(void) {
         case 1 ... 5:
             draw_screen1_5();
             break;
-        case 6:
+        case SETTINGS_SCREEN:
             draw_settings_menu();
             break;
         // case 7:
@@ -183,6 +180,16 @@ void refresh_display(void) {
     }
 
     ssd1306_show(&disp);
+
+    if (current_screen == SETTINGS_SCREEN) {
+        if (!st.settings.forced_contrast) {
+            st.settings.forced_contrast = true;
+            ssd1306_contrast(&disp, 0xff); // Force contrast for settings menu
+        }
+    } else if (st.settings.forced_contrast) {
+        st.settings.forced_contrast = false;
+        ssd1306_contrast(&disp, settings.disp_contrast);
+    }
 }
 
 static void draw_string(ssd1306_t *p, uint32_t x, uint32_t y, uint32_t scale, const uint8_t *font, const char *s) {
@@ -419,10 +426,20 @@ static void draw_settings_menu() {
             case 0:
                 i += snprintf(&s[i], (sizeof s) - i, "%c     Settings", sel);
                 break;
-            case 1:
+            case SETTING_CONTRAST:
+                i += snprintf(&s[i], (sizeof s) - i, "%c Disp Contrast", sel);
+                // Draw in inverted font if selected
+                i += snprintf(&s[i], (sizeof s) - i, " %s<%3d>%s", inv_c, st.settings.tmp.disp_contrast / CONTRAST_STEP, inv_c);
+                break;
+            case SETTING_STARTUP_STATE:
                 i += snprintf(&s[i], (sizeof s) - i, "%c Startup State", sel);
                 // Draw in inverted font if selected
                 i += snprintf(&s[i], (sizeof s) - i, " %s< %d >%s", inv_c, st.settings.tmp.startup_state, inv_c);
+                break;
+            case SETTING_EN_LOGGING:
+                i += snprintf(&s[i], (sizeof s) - i, "%c Logging Mode ", sel);
+                // Draw in inverted font if selected
+                i += snprintf(&s[i], (sizeof s) - i, " %s< %d >%s", inv_c, st.settings.tmp.uart_logging, inv_c);
                 break;
             default:
                 // i += snprintf(&s[i], (sizeof s) - i, "\n%c", sel);
@@ -450,6 +467,7 @@ void open_settings(void) {
 }
 
 bool update_settings_menu(uint8_t btn1, uint8_t btn2) {
+    uint8_t tmp_contrast = st.settings.tmp.disp_contrast;
     if (!st.settings.is_open) return true;
 
     if (st.settings.sel) {
@@ -462,21 +480,50 @@ bool update_settings_menu(uint8_t btn1, uint8_t btn2) {
                     // Allow short presses to cancel restore defaults
                     st.settings.sel = false; // Cancel
                     break;
-                case 1:
+                case SETTING_CONTRAST:
+                    tmp_contrast -= tmp_contrast % CONTRAST_STEP; // Floor to nearest multiple
+                    if (tmp_contrast == 0 && !up) tmp_contrast = 0xff;
+                    else if (tmp_contrast == 0xff && up) tmp_contrast = 0;
+                    else tmp_contrast += up ? CONTRAST_STEP : -CONTRAST_STEP;
+                    st.settings.tmp.disp_contrast = tmp_contrast;
+                    st.settings.modified = st.settings.tmp.disp_contrast != settings.disp_contrast;
+                    printf("Contrast set to: 0x%02x\n", tmp_contrast);
+
+                    if (tmp_contrast == 0) tmp_contrast = 0x80; // Don't go fully invisible
+                    ssd1306_contrast(&disp, tmp_contrast);
+                    break;
+                case SETTING_STARTUP_STATE:
                     st.settings.tmp.startup_state ^= 1;
                     st.settings.modified = st.settings.tmp.startup_state != settings.startup_state;
+                    break;
+                case SETTING_EN_LOGGING:
+                    st.settings.tmp.uart_logging += up ? 1 : -1;
+                    if (st.settings.tmp.uart_logging > LOGGING_CSV) {
+                        st.settings.tmp.uart_logging = up ? 0 : LOGGING_CSV;
+                    }
+                    st.settings.modified = st.settings.tmp.uart_logging != settings.uart_logging;
                     break;
             }
         } else if (btn1 == LONG_PRESS) {
             st.settings.sel = false; // Cancel
             // Load current value
             switch (st.settings.index) {
-                case 1:
+                case SETTING_CONTRAST:
+                    st.settings.tmp.disp_contrast = settings.disp_contrast;
+                    ssd1306_contrast(&disp, 0xff); // Go back to full contrast
+                    break;
+                case SETTING_STARTUP_STATE:
                     st.settings.tmp.startup_state = settings.startup_state;
+                    break;
+                case SETTING_EN_LOGGING:
+                    st.settings.tmp.uart_logging = settings.uart_logging;
                     break;
             }
         } else if (btn2 == LONG_PRESS) {
             st.settings.sel = false; // Save
+            if (st.settings.index == SETTING_CONTRAST) {
+                ssd1306_contrast(&disp, 0xff); // Go back to full contrast
+            }
             show_popup_centered(63, 31, 2, 500, 5, 1, "Saved");
             if (st.settings.index == 0) {
                 // Restore defaults
@@ -484,7 +531,7 @@ bool update_settings_menu(uint8_t btn1, uint8_t btn2) {
                 memcpy(&st.settings.tmp, &settings, sizeof settings);
                 save_settings();
                 return true; // Exit settings
-            } if (st.settings.modified) {
+            } else if (st.settings.modified) {
                 memcpy(&settings, &st.settings.tmp, sizeof settings);
                 save_settings();
             }
@@ -501,6 +548,10 @@ bool update_settings_menu(uint8_t btn1, uint8_t btn2) {
             return true;
         } else if (btn2 == LONG_PRESS) {
             st.settings.sel = true; // Select item
+            if (st.settings.index == SETTING_CONTRAST) {
+                if (tmp_contrast == 0) tmp_contrast = 0x80; // Don't go fully invisible
+                ssd1306_contrast(&disp, tmp_contrast);
+            }
             st.settings.modified = false;
         }
     }

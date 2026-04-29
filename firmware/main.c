@@ -127,19 +127,9 @@ int main() {
     init_power_sensors();
     init_display();
 
-    update_voltage(0, 3.31*1000);
-    update_voltage(1, 5.01*1000);
-    update_voltage(2, 4.98*1000);
-    update_voltage(3, 12.0*1000);
-    update_voltage(4, 11.8*1000);
-
-    update_current(0, 0.123*10000);
-    update_current(1, 1.547*10000);
-    update_current(2, 6.819*10000);
-    update_current(3, 0.0023*10000);
-    update_current(4, 0.0597*10000);
-
-    update_on_state(false);
+    if (settings.disp_contrast == 0) {
+        show_popup_centered(63, 31, 2, 2000, 7, 2, "Display\n  Off");
+    }
 
     uint8_t current_screen = 0;
     bool is_on = false;
@@ -173,16 +163,20 @@ int main() {
             if (ch == PICO_ERROR_TIMEOUT) break;
 
             char c = ch;
+            putchar(c); // Echo character
             if (cmd_len >= sizeof(cmd_buf)) {
                 printf("Error: Command buffer overflow\n");
                 cmd_len = 0;
             } else if (c == '\n' || c == '\r') {
-                // Process command if not empty
-                if (cmd_len > 0) {
-                    cmd_buf[cmd_len] = 0;
-                    cmd_len = 0;
-                    process_command(cmd_buf);
-                }
+                printf("\n");
+                // Process command (will print help prompt if empty)
+                cmd_buf[cmd_len] = 0;
+                cmd_len = 0;
+                process_command(cmd_buf);
+            } else if (c == '\b') {
+                // Backspace
+                if (cmd_len > 0) cmd_len--;
+                printf(" \b"); // Clear previous character in terminal
             } else {
                 // Append to buffer
                 cmd_buf[cmd_len++] = c;
@@ -192,7 +186,9 @@ int main() {
         if (absolute_time_diff_us(get_absolute_time(), measure_delay) < 0) {
             measure_delay = make_timeout_time_ms(100); // Measure every 100ms
 
-            printf("\n");
+            if (settings.uart_logging) {
+                printf("\n");
+            }
 
             for (uint8_t i = 0; i < NUM_POWER_SENSORS; i++) {
                 // Address order is backwards
@@ -200,7 +196,14 @@ int main() {
                 float c = power_sens_get_current(NUM_POWER_SENSORS-1-i);
                 bool ovf = power_sens_get_overflow(NUM_POWER_SENSORS-1-i);
 
-                printf("[CH %0d] Voltage: %6.3f V, Current %.1f mA%s\n", i, v, c*1000, ovf ? " OVERFLOW!!!" : "");
+                switch (settings.uart_logging) {
+                    case LOGGING_PLAIN:
+                        printf("[CH %0d] Voltage: %6.3f V, Current %.1f mA%s\n", i, v, c*1000, ovf ? " OVERFLOW!!!" : "");
+                        break;
+                    case LOGGING_CSV:
+                        printf("%0d,%.3f,%.1f,%0d\n", i, v, c*1000, ovf ? 1 : 0);
+                        break;
+                }
                 
                 update_voltage(i, v*1000);
                 update_current(i, c*10000);
@@ -268,7 +271,15 @@ static void process_command(const char *cmd) {
         refresh_display();
         sleep_ms(100);
         enter_bootloader();
+    } else if (strcmp(cmd, "help") == 0) {
+        printf("Available comamands:\n"
+               "  update    - Enters the bootloader for updating firmware\n"
+               "  help      - Prints this help message\n"
+        );
     } else {
-        printf("Unknown command: %s\n", cmd);
+        if (strlen(cmd) != 0) {
+            printf("Unknown command: %s\n", cmd);
+        }
+        printf("Type 'help' to view a list of valid commands\n");
     }
 }
