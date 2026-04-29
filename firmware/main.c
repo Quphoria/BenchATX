@@ -127,9 +127,11 @@ int main() {
     init_power_sensors();
     init_display();
 
+#ifndef SH1106
     if (settings.disp_contrast == 0) {
         show_popup_centered(63, 31, 2, 2000, 7, 2, "Display\n  Off");
     }
+#endif
 
     uint8_t current_screen = 0;
     bool is_on = false;
