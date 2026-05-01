@@ -4,6 +4,12 @@
 
   (paper "A4")
 
+  (title_block
+    (title "BenchATX Power Monitor")
+    (date "2026-05-01")
+    (rev "A")
+  )
+
   (lib_symbols
     (symbol "Connector_Generic:Conn_01x02" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
       (property "Reference" "J" (at 0 2.54 0)
