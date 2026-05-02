@@ -232,7 +232,7 @@ static void draw_string_with_inverts(ssd1306_t *p, uint32_t x, uint32_t y, uint3
 static inline uint8_t print_voltage(char *s, uint8_t n, int32_t voltage_mv, bool large) {
     if (large) {
         // 12.123V
-        uint8_t mv = abs(voltage_mv) % 1000;
+        uint16_t mv = abs(voltage_mv) % 1000;
         return snprintf(s, n, "%1d.%03dV", voltage_mv / 1000, mv);
     }
 
