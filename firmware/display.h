@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 // Use SH1106 instead of SSD1306
-// #define SH1106
+#define SH1106
 
 #define NUM_SCREENS 7
 #define SETTINGS_SCREEN 6
