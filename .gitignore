@@ -13,6 +13,7 @@ replicate_layout.log
 
 # My files
 .vscode/
+dis/
 
 # CMake build dir
 build
